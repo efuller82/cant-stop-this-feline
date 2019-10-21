@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './pages/Home';
 import AddCat from './pages/AddCat';
 import Adopt from './pages/Adopt';
+import Rumble from './pages/Rumble';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/addcat' component={AddCat} />
         <Route exact path='/adopt' component={Adopt} />
+        <Route exact path='/rumble' component={Rumble} />
       </Switch>
     </Router>
   );

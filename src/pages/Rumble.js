@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Banner from '../components/Banner';
 import SideNav from '../components/SideNav';
+
 import { Container, Row, Col } from 'react-grid-system';
 
-
-class Adopt extends Component {
+class Rumble extends Component {
     render() {
         return (
             <Container>
@@ -14,7 +14,7 @@ class Adopt extends Component {
                         <SideNav />
                     </Col>
                     <Col sm={9}>
-
+                        <h2 id='leaderboard'>Cat Rumble</h2>
                     </Col>
                 </Row>
             </Container>
@@ -23,4 +23,4 @@ class Adopt extends Component {
 
 }
 
-export default Adopt;
+export default Rumble;
