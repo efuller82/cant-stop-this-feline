@@ -4,6 +4,9 @@ import SideNav from '../components/SideNav';
 import { Container, Row, Col } from 'react-grid-system';
 
 
+// TODO function that hits local adoption API to get info about adoption local furries
+
+
 class Adopt extends Component {
     render() {
         return (

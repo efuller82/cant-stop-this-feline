@@ -4,6 +4,9 @@ import CatForm from '../components/CatForm';
 import SideNav from '../components/SideNav';
 import { Container, Row, Col } from 'react-grid-system';
 
+
+// TODO click event that adds all form data to db
+
 class AddCat extends Component {
     render() {
         return (
