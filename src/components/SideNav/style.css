@@ -1,5 +1,5 @@
 li {
-    margin-top: 15%;
+    margin-top: 45%;
     font-size: 1.5em;
 }
 
@@ -7,9 +7,6 @@ ul {
     list-style-type: none;
 }
 
-#side-nav {
-    margin-top: 60%;
-}
 
 a {
     color: black;
