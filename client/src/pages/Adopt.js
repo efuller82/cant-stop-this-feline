@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Banner from "../components/Banner";
 import SideNav from "../components/SideNav";
 import { Container, Row, Col } from "react-grid-system";
 import API from "../utils/API";
 import adoptsdk from "../utils/AdoptionSDK";
+import Org from "../components/Orgs";
+import { List, ListItem } from "../components/List";
+
 //Copied from Petfinder API JS-SDK documentation
 
 //client.organization.search({location: "Minneapolis, MN"})
@@ -114,6 +117,28 @@ class Adopt extends Component {
         <Row>
           <Col size="md-12">
             <h1 className="text-center">Results</h1>
+            {this.state.orgs.length ? (
+              <List>
+                {this.state.orgs.map(org => {
+                  return (
+                    <Fragment key={org.id}>
+                      <Org
+                        name={org.name}
+                        city={org.city}
+                        website={org.website}
+                        mission_statement={org.mission_statement}
+                      />
+                    </Fragment>
+                  );
+                })}
+              </List>
+            ) : (
+              <div>
+                <h2 className="heading-title text-center">
+                  {this.state.message}
+                </h2>
+              </div>
+            )}
           </Col>
         </Row>
       </Container>
