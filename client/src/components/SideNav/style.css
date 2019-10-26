@@ -1,13 +1,12 @@
-li {
+/*li {
     margin-top: 45%;
     font-size: 1.5em;
-}
+}*/
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-
 a {
-    color: black;
+  color: black;
 }

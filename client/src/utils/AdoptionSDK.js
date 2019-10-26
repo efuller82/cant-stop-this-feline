@@ -9,34 +9,16 @@ class AdoptionSDK {
   }
 
   search = (location, callback) => {
-    return (
-      this.client.organization
-        .search({ location: location })
-        .then(resp => {
-          // Do something with resp.data.organizations
-          return callback(resp.data);
-        })
-        // Do something with resp.data.organizations
-        //   return callback(resp.data);
+    return this.client.organization
+      .search({ location: location })
+      .then(resp => {
+        // Display resp.data.organizations on adoption.js
+        return callback(resp.data);
+      })
 
-        //   .map(org => {
-        // map and send back to client only the
-        //       // id, title, infoLink, authors, description, and thumbnail
-        //       return {
-        //         id: org.id,
-        //         name: org.organizations.name,
-        //         city: org.organizations.city,
-        //         website: org.organizations.website,
-        //         mission_statement: org.organizations.mission_statement,
-        //         href: org.organizations._links.animals
-        //       };
-        //     });
-        //   response.json(results);
-        // })
-        .catch(error => {
-          console.log(error);
-        })
-    );
+      .catch(error => {
+        console.log(error);
+      });
   };
 }
 const adoptsdk = new AdoptionSDK();
