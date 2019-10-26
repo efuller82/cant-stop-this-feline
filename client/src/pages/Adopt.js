@@ -62,10 +62,13 @@ class Adopt extends Component {
     console.log(this.state.q);
     adoptsdk.search(this.state.q, response => {
       console.log("test", response);
+      this.setState({ orgs: response.organizations });
+      console.log(this.state.orgs);
     });
   };
 
   render() {
+    //  console.log(this.state.orgs);
     return (
       <Container>
         <Banner />
