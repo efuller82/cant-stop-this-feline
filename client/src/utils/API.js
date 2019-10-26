@@ -1,6 +1,11 @@
 import axios from "axios";
 
 export default {
+  //Get local organizations via petfinder api and user input location
+  getOrgs: function(q) {
+    return axios.get("/api/search", { params: { q: "location:" + q } });
+  },
+
   // Gets all books
   getBooks: function() {
     return axios.get("/api/books");
