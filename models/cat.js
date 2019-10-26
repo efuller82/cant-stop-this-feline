@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const bookSchema = new Schema({
+const catSchema = new Schema({
   catName: { type: String, required: true },
   nickname: { type: String },
   description: { type: String },
   imgURL: { type: String }
 });
 
-const Book = mongoose.model("Book", bookSchema);
+const Cat = mongoose.model("Cat", catSchema);
 
-module.exports = Book;
+module.exports = Cat;

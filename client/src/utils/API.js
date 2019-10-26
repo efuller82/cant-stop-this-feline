@@ -5,22 +5,20 @@ export default {
   getOrgs: function(q) {
     return axios.get("/api/search", { params: { q: "location:" + q } });
   },
-
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  // Gets all cats
+  getCats: function() {
+    return axios.get("/api/cats");
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  // Gets the cat with the given id
+  getCat: function(id) {
+    return axios.get("/api/cats/" + id);
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Deletes the cat with the given id
+  deleteCat: function(id) {
+    return axios.delete("/api/cats/" + id);
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    console.log("It reached here.");
-    return axios.post("/api/books", bookData);
+  // Saves a cat to the database
+  saveCat: function(catData) {
+    return axios.post("/api/cats", catData);
   }
 };
