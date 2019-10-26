@@ -5,16 +5,7 @@ import { Container, Row, Col } from "react-grid-system";
 import API from "../utils/API";
 import adoptsdk from "../utils/AdoptionSDK";
 import Org from "../components/Orgs";
-import { List, ListItem } from "../components/List";
-
-//Copied from Petfinder API JS-SDK documentation
-
-//client.organization.search({location: "Minneapolis, MN"})
-//  .then(resp => {
-// Do something with resp.data.organizations
-//  });
-
-//end js-sdk code
+import { List } from "../components/List";
 
 // Function that hits local adoption API to get info about adoption local furries
 class Adopt extends Component {
@@ -59,11 +50,17 @@ class Adopt extends Component {
   //handles search form input
   handleFormSubmit = event => {
     event.preventDefault();
+    //this is my search term for location
     console.log(this.state.q);
     adoptsdk.search(this.state.q, response => {
-      console.log("test", response);
+      //this is what the API returns...
+      console.log("This is my API response: ", response);
+
+      //this is setting the state for orgs with the API response data
       this.setState({ orgs: response.organizations });
-      console.log(this.state.orgs);
+
+      //this is our new state for orgs
+      console.log("This is my new state for orgs: ", this.state.orgs);
     });
   };
 
@@ -87,7 +84,7 @@ class Adopt extends Component {
               className="jumbotron"
             >
               <h1>Get your own furry ball of fun!</h1>
-              <h2>Find adoption organizations near you?</h2>
+              <h2>Find adoption organizations near you.</h2>
             </div>
 
             <form className="form-inline" role="form">
@@ -100,7 +97,7 @@ class Adopt extends Component {
                   id="Title"
                   type="text"
                   value={this.state.q}
-                  placeholder="Enter a keyword..."
+                  placeholder="Enter city and state (ex. Austin, Tx) or zip-code"
                   name="q"
                   onChange={this.handleInputChange}
                   size="62"
@@ -127,9 +124,10 @@ class Adopt extends Component {
                     <Fragment key={org.id}>
                       <Org
                         name={org.name}
-                        city={org.city}
+                        city={org.address.city}
                         website={org.website}
                         mission_statement={org.mission_statement}
+                        url={org.url}
                       />
                     </Fragment>
                   );
