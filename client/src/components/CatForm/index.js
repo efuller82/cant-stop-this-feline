@@ -33,7 +33,7 @@ handleFormSubmit = event => {
             imgURL: this.state.imgURL
         };
         console.log(catData);
-        API.saveBook({ 
+        API.saveCat({ 
             catName: this.state.catName,
             nickname: this.state.nickname,
             description: this.state.description,
