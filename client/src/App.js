@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import AddCat from "./pages/AddCat";
 import Adopt from "./pages/Adopt";
 import Rumble from "./pages/Rumble";
+import "bootstrap/dist/css/bootstrap.min.css"; //npm install react-bootstrap bootstrap
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
