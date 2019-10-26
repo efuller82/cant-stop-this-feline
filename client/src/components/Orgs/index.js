@@ -1,32 +1,30 @@
 import React from "react";
 import { ListItem } from "../List";
 import "./style.css";
+import { Container, Row, Col } from "react-grid-system";
+import Button from "react-bootstrap/Button";
 
 const Org = ({ name, city, website, mission_statement, url }) => {
   // console.log("this is my " + Org);
   return (
     <ListItem>
-      <div className="media-snippet">
-        <article className="media">
-          <div className="media-content">
-            <h3 className="heading-title">{name}</h3>
-            <p className="heading-subtitle">{city}</p>
-            <p className="heading-subtitle">{website}</p>
-            <p className="p-article">{mission_statement}</p>
-            <div className="d-flex flex-row bd-highlight mb-3">
-              <div className="p-2 bd-highlight">
-                <a
-                  href={url}
-                  className="view-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Your Future Furry Friend
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <a
+            href={url}
+            className="btn btn-outline-primary myButton"
+            role="button"
+            aria-pressed="true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Find Your Future Furry Friend
+          </a>
+          <p className="card-text">{"In " + city}</p>
+          <h6 className="card-subtitle mb-2 text-muted">{website}</h6>
+          <p className="card-text">{mission_statement}</p>
+        </div>
       </div>
     </ListItem>
   );
