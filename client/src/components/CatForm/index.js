@@ -25,7 +25,7 @@ handleInputChange = event => {
 
 handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.catName && this.state.description) {
+    if (this.state.catName && this.state.description && this.state.imgURL.includes(".")) {
         let catData = {
             catName: this.state.catName,
             nickname: this.state.nickname,
