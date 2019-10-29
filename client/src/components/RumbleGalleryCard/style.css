@@ -1,0 +1,43 @@
+.cat-pic {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.img-container {
+  margin: auto;
+}
+
+.whole-card {
+  width: auto;
+  float: initial;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.card-subtitle {
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: auto;
+  width: auto;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  position: relative;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+.card > .img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background: white;
+}
+.card > .img-container > img {
+  width: 100%;
+}

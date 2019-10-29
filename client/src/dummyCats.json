@@ -1,44 +1,50 @@
 [
-    {
-        "id": 1,
-        "name": "Garfield",
-        "alias": "Lasagna Lover",
-        "image": "https://yt3.ggpht.com/a/AGF-l7_5_gsypJpmcfZFJlo7QlWEGHixtwrEuzgEaw=s900-c-k-c0xffffffff-no-rj-mo",
-        "bio": "Garfield is a cat that treats his bro like garbage, loves lasagna, and is lazy as all heck."
-    },
-    {
-        "id": 2,
-        "name": "Tardar Sauce",
-        "alias": "Grumpy Cat",
-        "image": "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg",
-        "bio": "Tardar Sauce (April 4, 2012[1] – May 14, 2019), nicknamed Grumpy Cat, was an American Internet celebrity cat. She was known for her permanently 'grumpy' facial appearance, which was caused by an underbite and feline dwarfism."
-    },
-    {
-        "id": 3,
-        "name": "Tigger",
-        "alias": "Just Tigger",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/41uPBydq69L.jpg",
-        "bio": "Tigger is a fictional tiger character originally introduced in The House at Pooh Corner, the sequel to Winnie-the-Pooh by A. A. Milne. Like other Pooh characters, Tigger is based on one of Christopher Robin Milne's stuffed toy animals."
-    },
-    {
-        "id": 4,
-        "name": "Chershire Cat",
-        "alias": "Churchy",
-        "image": "https://ohmy.disney.com/wp-content/uploads/2014/07/Cheshire-CAt-thinking.jpg",
-        "bio": "The Cheshire Cat is a fictional cat popularised by Lewis Carroll in Alice's Adventures in Wonderland and known for its distinctive mischievous grin"
-    },
-    {
-        "id": 5,
-        "name": "Sylvester J. Pussycat Sr.",
-        "alias": "Sylvester",
-        "image": "http://images5.fanpop.com/image/photos/30900000/Sylvester-the-Cat-warner-brothers-animation-30976216-300-297.png",
-        "bio": "Sylvester J. Pussycat Sr., usually called Sylvester, is a fictional character, a three-time Academy Award-winning anthropomorphic Tuxedo cat in the Looney Tunes and Merrie Melodies series of cartoons. Most of his appearances have him often chasing Tweety, Speedy Gonzales, or Hippety Hopper."
-    },
-    {
-        "id": 6,
-        "name": "Lil BUB",
-        "alias": "Lil Bub",
-        "image": "https://www.wired.com/images_blogs/underwire/2013/09/20130909-LIL-BUB-0149edit.jpg",
-        "bio": "Lil Bub, officially Lil BUB, is an American celebrity cat known for her unique physical appearance. She was the runt of her litter. Her owner, Mike Bridavsky, adopted her when his friends called to ask him to give her a home."
-    }
+  {
+    "id": 1,
+    "name": "Garfield",
+    "alias": "Lasagna Lover",
+    "image": "https://yt3.ggpht.com/a/AGF-l7_5_gsypJpmcfZFJlo7QlWEGHixtwrEuzgEaw=s900-c-k-c0xffffffff-no-rj-mo",
+    "bio": "Garfield is a cat that treats his bro like garbage, loves lasagna, and is lazy as all heck.",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Tardar Sauce",
+    "alias": "Grumpy Cat",
+    "image": "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg",
+    "bio": "Tardar Sauce (April 4, 2012[1] – May 14, 2019), nicknamed Grumpy Cat, was an American Internet celebrity cat. She was known for her permanently 'grumpy' facial appearance, which was caused by an underbite and feline dwarfism.",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Tigger",
+    "alias": "Just Tigger",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41uPBydq69L.jpg",
+    "bio": "Tigger is a fictional tiger character originally introduced in The House at Pooh Corner, the sequel to Winnie-the-Pooh by A. A. Milne. Like other Pooh characters, Tigger is based on one of Christopher Robin Milne's stuffed toy animals.",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Chershire Cat",
+    "alias": "Churchy",
+    "image": "https://ohmy.disney.com/wp-content/uploads/2014/07/Cheshire-CAt-thinking.jpg",
+    "bio": "The Cheshire Cat is a fictional cat popularised by Lewis Carroll in Alice's Adventures in Wonderland and known for its distinctive mischievous grin",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Sylvester J. Pussycat Sr.",
+    "alias": "Sylvester",
+    "image": "http://images5.fanpop.com/image/photos/30900000/Sylvester-the-Cat-warner-brothers-animation-30976216-300-297.png",
+    "bio": "Sylvester J. Pussycat Sr., usually called Sylvester, is a fictional character, a three-time Academy Award-winning anthropomorphic Tuxedo cat in the Looney Tunes and Merrie Melodies series of cartoons. Most of his appearances have him often chasing Tweety, Speedy Gonzales, or Hippety Hopper.",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Lil BUB",
+    "alias": "Lil Bub",
+    "image": "https://www.wired.com/images_blogs/underwire/2013/09/20130909-LIL-BUB-0149edit.jpg",
+    "bio": "Lil Bub, officially Lil BUB, is an American celebrity cat known for her unique physical appearance. She was the runt of her litter. Her owner, Mike Bridavsky, adopted her when his friends called to ask him to give her a home.",
+    "clicked": false
+  }
 ]
