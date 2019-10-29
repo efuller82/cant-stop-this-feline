@@ -3,11 +3,12 @@ import Banner from '../components/Banner';
 import CatGalleryCard from '../components/CatGalleryCard';
 
 //! The next line is for dummy data only
-import dummyCats from '../dummyCats.json';
+//import dummyCats from '../dummyCats.json';
 
 import { Container, Row, Col } from 'react-grid-system';
 
 import SideNav from '../components/SideNav';
+import API from "../utils/API";
 
 // TODO add function that loads cats from database into leaderboard
 // also will sort cats based upon cuteness score
@@ -21,7 +22,19 @@ import SideNav from '../components/SideNav';
 
 class Home extends Component {
     state = {
-        dummyCats
+        cats: []
+    }
+
+    componentDidMount() {
+        this.loadCats();
+    }
+
+    loadCats = () => {
+        API.getCats()
+            .then(res => {
+                this.setState({ cats: res.data });
+            })
+            .catch(err => console.log(err));
     }
 
     render() {
@@ -34,14 +47,14 @@ class Home extends Component {
                     </Col>
                     <Col sm={9}>
                         <h2 id='leaderboard'>Cat Leaderboard</h2>
-                        {this.state.dummyCats.map(dummyCat => (
+                        {this.state.cats.map(dummyCat => (
                             <CatGalleryCard
                                 id={dummyCat.id}
                                 key={dummyCat.id}
-                                name={dummyCat.name}
-                                alias={dummyCat.alias}
-                                image={dummyCat.image}
-                                bio={dummyCat.bio}
+                                catName={dummyCat.catName}
+                                nickname={dummyCat.nickname}
+                                imgURL={dummyCat.imgURL}
+                                description={dummyCat.description}
                             />
                         ))}
                     </Col>

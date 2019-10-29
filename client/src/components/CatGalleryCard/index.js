@@ -5,20 +5,20 @@ function CatGalleryCard(props) {
     return (
         <div className='card whole-card'>
             <h5 className='card-title'>
-                {props.name}
+                {props.catName}
             </h5>
             <h6 className='card-subtitle'>
-                {props.alias}
+                {props.nickname}
             </h6>
             <div className='img-container'>
                 <img
                     className='cat-pic'
-                    alt={props.bio}
-                    src={props.image}
+                    alt={props.catName}
+                    src={props.imgURL}
                 />
             </div>
             <p className='card-text'>
-                {props.bio}
+                {props.description}
             </p>
         </div>
     )
