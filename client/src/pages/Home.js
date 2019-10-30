@@ -43,8 +43,9 @@ class Home extends Component {
             .catch(err => console.log(err));
     };
 
-    vote = cat => {
-        API.getCat(cat.id)
+    votes = cat => {
+        var objectU = { upvotes: cat.upvotes + 1 };
+        API.updateCat(cat.id, objectU)
             .then(res => this.loadCats())
             .catch(err => console.log(err));
     }
@@ -68,7 +69,7 @@ class Home extends Component {
                                 nickname={dummyCat.nickname}
                                 imgURL={dummyCat.imgURL}
                                 description={dummyCat.description}
-                                vote={this.votes}
+                                votes={this.votes}
                                 upvotes={dummyCat.upvotes}
                             />
                         ))}
