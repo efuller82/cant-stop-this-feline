@@ -4,10 +4,12 @@ import './style.css';
 function CatGalleryCard(props) {
     return (
         <div className='card whole-card'>
-            <div> 
+            <div>
                 <h5 className='card-title'>
                     {props.catName}
+                    <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}>X</button>
                 </h5>
+                {/* <span class="delete-btn" role="button" tabindex="0">✗</span> */}
                 <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}>X</button>
             </div>
             <h6 className='card-subtitle'>
@@ -23,7 +25,7 @@ function CatGalleryCard(props) {
             <p className='card-text'>
                 {props.description}
             </p>
-            <button onClick={() => props.vote(props)} type="button" className="btn btn-outline-success" id={props.id}>Upvote ({props.upvotes})</button>
+            <button onClick={() => props.votes(props)} type="button" className="btn btn-outline-success" id={props.id}>Upvote ({props.upvotes})</button>
         </div>
     )
 }
