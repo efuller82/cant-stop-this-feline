@@ -37,6 +37,12 @@ class Home extends Component {
             .catch(err => console.log(err));
     }
 
+    deleteCat = id => {
+        API.deleteCat(id)
+            .then(res => this.loadCats())
+            .catch(err => console.log(err));
+    };
+
     render() {
         return (
             <Container>
@@ -49,8 +55,9 @@ class Home extends Component {
                         <h2 id='leaderboard'>Cat Leaderboard</h2>
                         {this.state.cats.map(dummyCat => (
                             <CatGalleryCard
-                                id={dummyCat.id}
                                 key={dummyCat.id}
+                                id={dummyCat._id}
+                                deleteCat={this.deleteCat}
                                 catName={dummyCat.catName}
                                 nickname={dummyCat.nickname}
                                 imgURL={dummyCat.imgURL}
