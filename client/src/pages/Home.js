@@ -43,6 +43,12 @@ class Home extends Component {
             .catch(err => console.log(err));
     };
 
+    vote = cat => {
+        API.getCat(cat.id)
+            .then(res => this.loadCats())
+            .catch(err => console.log(err));
+    }
+
     render() {
         return (
             <Container>
@@ -62,6 +68,8 @@ class Home extends Component {
                                 nickname={dummyCat.nickname}
                                 imgURL={dummyCat.imgURL}
                                 description={dummyCat.description}
+                                vote={this.votes}
+                                upvotes={dummyCat.upvotes}
                             />
                         ))}
                     </Col>

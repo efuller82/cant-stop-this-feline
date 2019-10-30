@@ -39,7 +39,7 @@ handleFormSubmit = event => {
             description: this.state.description,
             imgURL: this.state.imgURL
          })
-            .then(res => console.log(res + "Success."))
+            .then(res => alert(res.data.catName + " has been added!"))
             .catch(err => console.log(err));
     }
     this.clearForm();
