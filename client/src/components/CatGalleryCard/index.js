@@ -4,9 +4,10 @@ import './style.css';
 function CatGalleryCard(props) {
     return (
         <div className='card whole-card'>
-            <div> 
+            <div>
                 <h5 className='card-title'>
                     {props.catName}
+                    <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}>X</button>
                 </h5>
                 {/* <span class="delete-btn" role="button" tabindex="0">✗</span> */}
                 <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}>X</button>
