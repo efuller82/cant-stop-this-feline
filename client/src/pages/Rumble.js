@@ -4,6 +4,7 @@ import SideNav from "../components/SideNav";
 import Wrapper from "../components/Wrapper";
 import { Container, Row, Col } from "react-grid-system";
 import RumbleGalleryCard from "../components/RumbleGalleryCard";
+import RumbleCats from "../components/RumbleCats";
 import "./rumble_styles.css";
 //! The next line is for dummy data only
 import dummyCats from "../dummyCats.json";
@@ -12,7 +13,8 @@ class Rumble extends Component {
   state = {
     dummyCats,
     score: 0,
-    userMsg: "Choose your cat."
+    userMsg: "Choose your cat.",
+    clicked: "false"
   };
 
   handleSelection = () => {
@@ -114,6 +116,10 @@ class Rumble extends Component {
           </Col>
           <Col sm={9}>
             <div className="rumbleSubtitle">Pick Your Rumbler</div>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={3}>
             <Wrapper>
               {this.state.dummyCats.map(dummyCat => (
                 <RumbleGalleryCard
@@ -121,19 +127,13 @@ class Rumble extends Component {
                   key={dummyCat.id}
                   alias={dummyCat.alias}
                   image={dummyCat.image}
+                  isClicked={this.clicked}
                 />
               ))}
             </Wrapper>
           </Col>
-          <Col>
-            <div class="card">
-              <div class="card-body">This is some text within a card body.</div>
-            </div>
-          </Col>
-          <Col>
-            <div class="card">
-              <div class="card-body">This is some text within a card body.</div>
-            </div>
+          <Col sm={9}>
+            <RumbleCats />
           </Col>
         </Row>
       </Container>
