@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/cats");
   },
   // Gets the cat with the given id
-  getCat: function(id) {
-    return axios.get("/api/cats/" + id);
+  updateCat: function(id, upvotes) {
+    return axios.put("/api/cats/" + id, upvotes);
   },
   // Deletes the cat with the given id
   deleteCat: function(id) {

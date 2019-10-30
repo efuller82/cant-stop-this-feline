@@ -17,6 +17,8 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcatlist", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+//"mongodb://localhost/reactcatlist" 
+//"mongodb://user:2829ehl@ds241298.mlab.com:41298/heroku_666qq26r"
 
 // Start the API server
 app.listen(PORT, function() {
