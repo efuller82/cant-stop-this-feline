@@ -20,5 +20,10 @@ export default {
   // Saves a cat to the database
   saveCat: function(catData) {
     return axios.post("/api/cats", catData);
+  },
+
+  //Displays selected cat on rumble page
+  selectCat: function(id) {
+    return axios.get("/api/cats/" + id);
   }
 };
