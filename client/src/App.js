@@ -4,6 +4,7 @@ import AddCat from "./pages/AddCat";
 import Adopt from "./pages/Adopt";
 import Rumble from "./pages/Rumble";
 import "bootstrap/dist/css/bootstrap.min.css"; //npm install react-bootstrap bootstrap
+import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -24,5 +25,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

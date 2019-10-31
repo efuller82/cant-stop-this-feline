@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from '../components/Banner';
 import CatGalleryCard from '../components/CatGalleryCard';
-
+import "./stylePages.css";
 //! The next line is for dummy data only
 //import dummyCats from '../dummyCats.json';
 

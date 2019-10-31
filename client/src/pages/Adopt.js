@@ -6,6 +6,7 @@ import API from "../utils/API";
 import adoptsdk from "../utils/AdoptionSDK";
 import Org from "../components/Orgs";
 import { List } from "../components/List";
+import "./stylePages.css";
 
 // Function that hits local adoption API to get info about adoption local furries
 class Adopt extends Component {
@@ -83,8 +84,8 @@ class Adopt extends Component {
               }}
               className="jumbotron"
             >
-              <h1>Get your own furry ball of fun!</h1>
-              <h2>Find adoption organizations near you.</h2>
+              <h1><span class="font1">Get your own furry ball of fun!</span></h1>
+              <h2><span class="font2">Find adoption organizations near you.</span></h2>
             </div>
 
             <form className="form-inline" role="form">
@@ -116,7 +117,7 @@ class Adopt extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            <h1 className="text-center">Results</h1>
+            <h1 className="text-center"  id="searchHead"> Results</h1>
             {this.state.orgs.length ? (
               <List>
                 {this.state.orgs.map(org => {

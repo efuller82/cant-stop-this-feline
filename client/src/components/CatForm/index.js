@@ -56,8 +56,8 @@ clearForm = () => {
 
 render() {
     return (
-        <div className='card'>
-            <div className='card-body'>
+        <div className='card'id="add-cat-card">
+            <div className='card-body' id="add-cat-body">
                 <h3 className='card-title'>Add a Cat</h3>
                 <form>
                     <label htmlFor='cat-name'>Cat Name: </label>

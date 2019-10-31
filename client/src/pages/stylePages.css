@@ -1,3 +1,6 @@
+#containter {
+    background-color: black;
+}
 .left-nav {
     /* background-color: #5b4342; */
     background-color: #000000;
@@ -16,4 +19,20 @@
     padding-left: 0 !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
+}
+#leaderboard {
+    font-family: 'Modak', cursive;
+}
+
+#searchHead {
+    font-family: 'Modak', cursive;
+}
+.jumbotron {
+}
+.font1{
+    font-family: 'Modak', cursive;
+}
+
+.card-title {
+    font-family: 'Modak', cursive;
 }

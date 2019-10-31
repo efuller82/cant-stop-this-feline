@@ -1,3 +1,14 @@
+.whole-card:hover{
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; /* make this whatever you want */
+    }
+
+.whole-card {
+    background-image: url(https://i.imgur.com/WatfHk5.png) !important;
+    background-size: 275% !important;
+    box-shadow: 10px 10px 20px black;
+    margin-bottom: 10px !important;
+}
+
 .cat-pic {
     max-width: 100px;
     max-height: 100px;
@@ -13,10 +24,30 @@
     float: left;    
     margin: 20px;
     overflow: hidden;
+
 }
 
 button.delete {
     float: right;
     width: 15px;
     text-align: center;
+}
+
+#leaderboard-card-title{
+    text-align: center;
+    background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
+    background:transparent;
+    background-size: 100% !important;
+}
+#description {
+    background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
+    background:transparent;
+    background-size: 140% !important;
+
+}
+
+#material-icons {
+    size: auto !important;
+    max-width: 100%;
+    
 }
