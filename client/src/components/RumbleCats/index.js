@@ -8,23 +8,15 @@ function RumbleCats(props) {
       <Row>
         <Col>
           <div className="card">
-            <h5 className="card-subtitle">{props.alias}</h5>
-            <div
-              //Need a new prop - isClicked - boolean - used to determine which cat will play the game
-              onClick={() => props.clicked(props.isClicked, props.id)}
-              className="img-container"
-            >
+            <h5 className="card-subtitle">My Cat</h5>
+            <div className="img-container">
               <img className="cat-pic" src={props.image} />
             </div>
           </div>
           <div className="versus">VS</div>
           <div className="card">
-            <h5 className="card-subtitle">{props.alias}</h5>
-            <div
-              //Need a new prop - isClicked - boolean - used to determine which cat will play the game
-              onClick={() => props.clicked(props.isClicked, props.id)}
-              className="img-container"
-            >
+            <h5 className="card-subtitle">Challenger Cat</h5>
+            <div className="img-container">
               <img className="cat-pic" src={props.image} />
             </div>
           </div>

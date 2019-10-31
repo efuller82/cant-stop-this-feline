@@ -8,12 +8,17 @@ function RumbleGalleryCard(props) {
       <Row>
         <Col>
           <div className="card">
-            <h5 className="card-subtitle">{props.alias}</h5>
-            <div
-              //Need a new prop - isClicked - boolean - used to determine which cat will play the game
-              onClick={() => props.clicked(props.isClicked, props.id)}
-              className="img-container"
-            >
+            <h5 className="card-subtitle">
+              <button
+                onClick={() => props.handleSelection(props.id)}
+                type="button"
+                className="btn-outline-primary"
+                id={props.id}
+              >
+                {props.alias}
+              </button>
+            </h5>
+            <div className="img-container">
               <img className="cat-pic" src={props.image} />
             </div>
           </div>
