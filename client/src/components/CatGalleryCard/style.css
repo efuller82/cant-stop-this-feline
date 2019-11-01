@@ -3,24 +3,21 @@
     }
 
 .whole-card {
-    background-image: url(https://i.imgur.com/WatfHk5.png) !important;
+    /* background-image: url(https://i.imgur.com/WatfHk5.png) !important; */
     background-size: 275% !important;
     box-shadow: 10px 10px 20px black;
     margin-bottom: 10px !important;
 }
 
-.cat-pic {
-    max-width: 100px;
-    max-height: 100px;
-}
 
 .img-container {
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .whole-card {
-    max-width: 200px;
-    height: 275px;
+    height: 400px !important;
+    width: 350px !important;
     float: left !important;    
     margin: 20px;
     overflow: hidden;
@@ -35,18 +32,26 @@ button.delete {
 #leaderboard-card-title{
     text-align: center;
     background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
-    background:transparent;
+    background:transparent !important;
     background-size: 100% !important;
 }
+
 #description {
-    background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
     background:transparent;
     background-size: 140% !important;
+    overflow-y: scroll;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: black;
+    /* overflow: hidden; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
 
 }
 
 #material-icons {
     size: auto !important;
     max-width: 100%;
-    
 }
+

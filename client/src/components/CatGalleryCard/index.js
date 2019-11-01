@@ -6,14 +6,15 @@ function CatGalleryCard(props) {
         <div className='card whole-card'>
             <div>
 
-      
+
                 <h5 className='card-title' id="leaderboard-card-title">
-      
+
                     {props.catName}
-                    <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}>X</button>
+                    <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-danger delete" id={props.id}><i class="material-icons">delete_forever</i></button>
                 </h5>
+
                 <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}><i class="material-icons">delete_forever</i></button>
-                  
+
             </div>
             <h6 className='card-subtitle'>
                 "{props.nickname}"
@@ -21,6 +22,7 @@ function CatGalleryCard(props) {
             <div className='img-container'>
                 <img
                     className='cat-pic'
+                    id='make-cat-bigger'
                     alt={props.catName}
                     src={props.imgURL}
                 />
@@ -28,7 +30,7 @@ function CatGalleryCard(props) {
             <p className='card-text' id="description">
                 {props.description}
             </p>
-            <button onClick={() => props.votes(props)} type="button" className="btn btn-outline-success" id={props.id}>Upvote ({props.upvotes})</button>
+            <button onClick={() => props.votes(props)} type="button" className="btn btn-success" id={props.id}>Upvote ({props.upvotes})</button>
         </div>
     )
 }
