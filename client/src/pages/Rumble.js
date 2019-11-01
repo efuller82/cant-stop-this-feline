@@ -15,7 +15,9 @@ class Rumble extends Component {
     dummyCats,
     score: 0,
     userMsg: "Choose your cat.",
-    clicked: false
+    clicked: false,
+    myCat: {},
+    challengerCat: {}
   };
 
   handleSelection = id => {
@@ -23,13 +25,15 @@ class Rumble extends Component {
       dummyCats => dummyCats.id === id
     );
     console.log(selectedCat);
-
-    if (selectedCat.clicked === false) {
-      API.selectCat({
-        alias: dummyCats.alias,
-        image: dummyCats.image
-      }).then(() => this.setState({ clicked: true }));
-    }
+    this.setState({
+      myCat: selectedCat
+    });
+    //   if (selectedCat.clicked === false) {
+    //     API.selectCat({
+    //       alias: dummyCats.alias,
+    //       image: dummyCats.image
+    //     }).then(() => this.setState({ clicked: true }));
+    //   }
   };
 
   render() {
@@ -59,7 +63,10 @@ class Rumble extends Component {
               </Wrapper>
             </Col>
             <Col sm={9}>
-              <RumbleCats />
+              <RumbleCats
+                myCat={this.state.myCat}
+                challengerCat={this.state.challengerCat}
+              />
             </Col>
           </Row>
         </Container>
