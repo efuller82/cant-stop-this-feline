@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/cats");
   },
   // Gets the cat with the given id
-  getCat: function(id) {
-    return axios.get("/api/cats/" + id);
+  updateCat: function(id, upvotes) {
+    return axios.put("/api/cats/" + id, upvotes);
   },
   // Deletes the cat with the given id
   deleteCat: function(id) {
@@ -20,5 +20,10 @@ export default {
   // Saves a cat to the database
   saveCat: function(catData) {
     return axios.post("/api/cats", catData);
+  },
+
+  //Displays selected cat on rumble page
+  selectCat: function(id) {
+    return axios.get("/api/cats/" + id);
   }
 };

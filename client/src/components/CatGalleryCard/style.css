@@ -21,7 +21,7 @@
 .whole-card {
     max-width: 200px;
     height: 275px;
-    float: left;    
+    float: left !important;    
     margin: 20px;
     overflow: hidden;
 
@@ -29,7 +29,6 @@
 
 button.delete {
     float: right;
-    width: 15px;
     text-align: center;
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { ListItem } from "../List";
 import "./style.css";
-import { Container, Row, Col } from "react-grid-system";
 import Button from "react-bootstrap/Button";
 
 const Org = ({ name, city, website, mission_statement, url }) => {
