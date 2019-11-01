@@ -28,7 +28,7 @@ function CatGalleryCard(props) {
             <p className='card-text' id="description">
                 {props.description}
             </p>
-            <button onClick={() => props.votes(props)} type="button" className="btn btn-success" id={props.id}>Upvote ({props.upvotes})</button>
+            <button onClick={() => props.votes(props)} type="button" className="btn btn-success btn-upvote" id={props.id}>Upvote ({props.upvotes})</button>
         </div>
     )
 }
