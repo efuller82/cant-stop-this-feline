@@ -13,8 +13,6 @@ function CatGalleryCard(props) {
                     <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-danger delete" id={props.id}><i class="material-icons">delete_forever</i></button>
                 </h5>
 
-                <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-outline-danger delete" id={props.id}><i class="material-icons">delete_forever</i></button>
-
             </div>
             <h6 className='card-subtitle'>
                 "{props.nickname}"
