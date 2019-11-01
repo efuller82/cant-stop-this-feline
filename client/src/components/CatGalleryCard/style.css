@@ -35,6 +35,7 @@ button.delete {
     background:transparent !important;
     background-size: 100% !important;
 }
+
 #description {
     background:transparent;
     background-size: 140% !important;
@@ -47,13 +48,10 @@ button.delete {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2; /* number of lines to show */
 
-
 }
 
 #material-icons {
     size: auto !important;
     max-width: 100%;
-    
 }
-
 

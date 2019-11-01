@@ -6,32 +6,45 @@ import { Container, Row, Col } from "react-grid-system";
 import RumbleGalleryCard from "../components/RumbleGalleryCard";
 import RumbleCats from "../components/RumbleCats";
 import "./rumble_styles.css";
-//! The next line is for dummy data only
-import dummyCats from "../dummyCats.json";
 import API from "../utils/API";
+//! The next line is for dummy data only
+// import dummyCat from "../dummyCat.json";
 
 class Rumble extends Component {
   state = {
-    dummyCats,
-    score: 0,
+    cats: [],
     userMsg: "Choose your cat.",
     clicked: false,
     myCat: {},
     challengerCat: {}
   };
 
+  componentDidMount() {
+    this.loadCats();
+  }
+
+  loadCats = () => {
+    API.getCats()
+      .then(res => {
+        this.setState({ cats: res.data });
+      })
+      .catch(err => console.log(err));
+  };
+
   handleSelection = id => {
-    const selectedCat = this.state.dummyCats.find(
-      dummyCats => dummyCats.id === id
-    );
+    console.log(this.state.cats);
+    console.log(id);
+    const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
+
     console.log(selectedCat);
+
     this.setState({
       myCat: selectedCat
     });
     //   if (selectedCat.clicked === false) {
     //     API.selectCat({
-    //       alias: dummyCats.alias,
-    //       image: dummyCats.image
+    //       alias: dummyCat.alias,
+    //       image: dummyCat.image
     //     }).then(() => this.setState({ clicked: true }));
     //   }
   };
@@ -51,12 +64,12 @@ class Rumble extends Component {
             <Col sm={3}>
               <Wrapper>
                 <div className="rumbleSubtitle">Pick Your Rumbler</div>
-                {this.state.dummyCats.map(dummyCats => (
+                {this.state.cats.map(dummyCat => (
                   <RumbleGalleryCard
-                    id={dummyCats.id}
-                    key={dummyCats.id}
-                    alias={dummyCats.alias}
-                    image={dummyCats.image}
+                    key={dummyCat.id}
+                    id={dummyCat._id}
+                    nickname={dummyCat.nickname}
+                    imgURL={dummyCat.imgURL}
                     handleSelection={this.handleSelection}
                   />
                 ))}

@@ -1,5 +1,11 @@
 
-.img-container {
+.rumbleCat-pic {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+
+.rumble-img-container {
   margin: auto;
 }
 
@@ -10,13 +16,13 @@
   overflow: hidden;
 }
 
-.card-subtitle {
+.basicCard-subtitle {
   margin: auto;
   padding: 0.5rem;
   text-align: center;
 }
 
-.card {
+.basicRumbleCard {
   background: #fff;
   border-radius: 2px;
   height: auto;
