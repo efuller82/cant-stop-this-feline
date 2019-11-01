@@ -3,28 +3,31 @@ import "./style.css";
 import { Container, Row, Col } from "react-grid-system";
 
 class RumbleCats extends Component {
-  state = {
-    myCat: this.props.myCat,
-    challengerCat: this.props.challengerCat
-  };
+  // state = {
+  //   myCat: this.props.myCat,
+  //   challengerCat: this.props.challengerCat
+  // };
 
   render() {
+    console.log(this.props);
     return (
       <Container>
         <Row>
           <Col>
-            <div className="card">
-              <h5 className="card-subtitle">My Cat</h5>
-              <p>{this.props.myCat.alias}</p>
-              <div className="img-container">
-                <img className="cat-pic" src={this.props.myCat.image} />
+            <h4 className="rumbleHeaders">My Cat</h4>
+            <div className="basicRumbleCard">
+              <p className="card-subtitle rumbleCard">
+                {this.props.myCat.nickname}
+              </p>
+              <div className="rumble-img-container">
+                <img className="rumbleCat-pics" src={this.props.myCat.imgURL} />
               </div>
             </div>
-            <div className="versus">VS</div>
-            <div className="card">
-              <h5 className="card-subtitle">Challenger Cat</h5>
+            <h5 className="rumbleHeaders">VS</h5>
+            <h4 className="rumbleHeaders">Challenger Cat</h4>
+            <div className="basicRumbleCard">
               <div className="img-container">
-                <img className="cat-pic" src={this.props.image} />
+                <img className="rumbleCat-pics" src={this.props.imgURL} />
               </div>
             </div>
           </Col>

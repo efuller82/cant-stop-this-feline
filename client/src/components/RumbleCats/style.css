@@ -1,10 +1,26 @@
-.versus {
+
+.rumbleCat-pics {
+  max-width: 200px;
+  max-height: 200px;
+  vertical-align: middle;
+}
+.rumbleHeaders {
   font-size: 18pt;
   font-weight: bold;
   text-align: center;
 }
-.img-container {
+
+.rumbleCard {
   margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-style: oblique;
+  font-size: 24pt;
+}
+
+.rumble-img-container {
+  margin: auto;
+  text-align: center;
 }
 
 .whole-card {
@@ -14,13 +30,13 @@
   overflow: hidden;
 }
 
-.card-subtitle {
+.basicCard-subtitle {
   margin: auto;
   padding: 0.5rem;
   text-align: center;
 }
 
-.card {
+.basicRumbleCard {
   background: #fff;
   border-radius: 2px;
   height: auto;
@@ -30,14 +46,4 @@
   position: relative;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
-}
-
-.card > .img-container {
-  height: 100%;
-  overflow: hidden;
-  text-align: center;
-  background: white;
-}
-.card > .img-container > img {
-  width: 100%;
 }
