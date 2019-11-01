@@ -1,7 +1,7 @@
-/*li {
-    margin-top: 45%;
-    font-size: 1.5em;
-}*/
+li {
+    margin-top: 30%;
+    font-size: 2em;
+}
 
 ul {
   list-style-type: none;
@@ -12,7 +12,21 @@ a {
 }
 
 #side-nav {
-  font-family: 'Modak', cursive;
-  font-size: 150%;
+  /* font-family: 'Modak', cursive; */
+  /* font-size: 150%; */
+}
 
+.side-nav-item {
+  color: black;
+  margin-top: 35px !important;
+  text-shadow: 2px 2px white;
+  font-family: 'milkshake';
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-side-nav {
+  background-color: #ffc0c0 !important;
 }

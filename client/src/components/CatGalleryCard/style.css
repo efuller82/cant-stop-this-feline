@@ -55,3 +55,8 @@ button.delete {
     max-width: 100%;
 }
 
+
+.btn-upvote {
+    background-color: #ffc0c0 !important;
+}
+
