@@ -1,3 +1,18 @@
+.navbar {
+    background: transparent;
+    /*background-image: url(https://i.imgur.com/9ZRUeCw.png);*/
+    text-align: center !important;
+
+}
+/*#sign-in {
+    float: left !important;
+}*/
+#catbanner {
+    size: auto !important;
+    max-width: 60% !important;
+    float: center !important;
+}
+
 #banner-title {
     margin: auto;
 }

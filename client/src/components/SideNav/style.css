@@ -10,3 +10,9 @@ ul {
 a {
   color: black;
 }
+
+#side-nav {
+  font-family: 'Modak', cursive;
+  font-size: 150%;
+
+}

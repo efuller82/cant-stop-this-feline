@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import CatForm from '../components/CatForm';
 import SideNav from '../components/SideNav';
 import { Container, Row, Col } from 'react-grid-system';
+import "./stylePages.css";
 
 
 // TODO click event that adds all form data to db

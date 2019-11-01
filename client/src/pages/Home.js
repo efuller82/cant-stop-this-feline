@@ -4,6 +4,8 @@ import CatGalleryCard from "../components/CatGalleryCard";
 import { Container, Row, Col } from "react-grid-system";
 import SideNav from "../components/SideNav";
 import API from "../utils/API";
+import "./stylePages.css";
+
 //! The next line is for dummy data only
 //import dummyCats from '../dummyCats.json';
 
