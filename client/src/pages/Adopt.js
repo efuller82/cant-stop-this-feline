@@ -84,8 +84,14 @@ class Adopt extends Component {
               }}
               className="jumbotron"
             >
-              <h1><span className="font1">Get your own furry ball of fun!</span></h1>
-              <h2><span className="font2">Find adoption organizations near you.</span></h2>
+              <h1>
+                <span className="font1">Get your own furry ball of fun!</span>
+              </h1>
+              <h2>
+                <span className="font2">
+                  Find adoption organizations near you.
+                </span>
+              </h2>
             </div>
 
             <form className="form-inline">
@@ -108,7 +114,7 @@ class Adopt extends Component {
               <button
                 onClick={this.handleFormSubmit}
                 type="submit"
-                className="btn btn-lg search-btn"
+                className="btn btn-lg search-btn startBtn"
               >
                 Search
               </button>
@@ -117,7 +123,10 @@ class Adopt extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            <h1 className="text-center"  id="searchHead"> Results</h1>
+            <h1 className="text-center" id="searchHead">
+              {" "}
+              Results
+            </h1>
             {this.state.orgs.length ? (
               <List>
                 {this.state.orgs.map(org => {

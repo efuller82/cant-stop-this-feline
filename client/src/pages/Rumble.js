@@ -5,7 +5,7 @@ import Wrapper from "../components/Wrapper";
 import { Container, Row, Col } from "react-grid-system";
 import RumbleGalleryCard from "../components/RumbleGalleryCard";
 import RumbleCats from "../components/RumbleCats";
-import "./rumble_styles.css";
+import "./stylePages.css";
 import API from "../utils/API";
 //! The next line is for dummy data only
 // import dummyCat from "../dummyCat.json";
@@ -13,8 +13,8 @@ import API from "../utils/API";
 class Rumble extends Component {
   state = {
     cats: [],
-    userMsg: "Choose your cat.",
-    clicked: false,
+    // userMsg: "Choose your cat.",
+    // clicked: false,
     myCat: {},
     challengerCat: {}
   };
