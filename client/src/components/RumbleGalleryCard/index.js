@@ -19,7 +19,7 @@ function RumbleGalleryCard(props) {
               </button>
             </h5>
             <div className="rumble-img-container">
-              <img className="rumbleCat-pic" src={props.imgURL} />
+              <img className="rumbleCat-pic" alt="catcat" src={props.imgURL} />
             </div>
           </div>
         </Col>
