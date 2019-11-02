@@ -27,8 +27,8 @@
     top: 2%;
 
     animation-name: lookdown;
-     animation-delay: 3s;
-     animation-duration: 15s;
+     animation-delay: 2.5s;
+     animation-duration: 16s;
      animation-iteration-count: infinite ;
      animation-direction: alternate;
      animation-fill-mode: both;
@@ -84,7 +84,7 @@
     width: 11%;
     height: 7%;
     background: transparent;
-    transition: height .65s;
+    transition: height .16s;
     transition-timing-function: cubic-bezier(0.1, 0.4, 0.6, 0.8);
 }
 
