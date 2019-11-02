@@ -9,7 +9,7 @@ function Banner() {
 
             <a href='/'><img src="https://i.imgur.com/VZwQ72C.png" className='eyes'id='eyes'alt='cateye'></img> </a>
             <a href='/'><div className="overflow-lid" id="overflow-left">
-                <a href='/'><img src="https://i.imgur.com/0YwxPLf.png" className='lids'id='lids'alt='cateye'></img> </a>
+                <a href='/'><img src="https://i.imgur.com/EXrxAZh.png" className='lids'id='lids'alt='cateye'></img> </a>
                 </div></a>
 
             
