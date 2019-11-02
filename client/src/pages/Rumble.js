@@ -69,7 +69,7 @@ class Rumble extends Component {
                 <div className="rumbleSubtitle">Pick Your Rumbler</div>
                 {this.state.cats.map(dummyCat => (
                   <RumbleGalleryCard
-                    key={dummyCat.id}
+                    key={dummyCat._id}
                     id={dummyCat._id}
                     nickname={dummyCat.nickname}
                     imgURL={dummyCat.imgURL}

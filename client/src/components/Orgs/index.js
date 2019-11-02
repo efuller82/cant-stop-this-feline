@@ -1,7 +1,7 @@
 import React from "react";
 import { ListItem } from "../List";
 import "./style.css";
-import Button from "react-bootstrap/Button";
+//import Button from "react-bootstrap/Button";
 
 const Org = ({ name, city, website, mission_statement, url }) => {
   // console.log("this is my " + Org);
