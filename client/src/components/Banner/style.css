@@ -8,11 +8,60 @@
     float: left !important;
 }*/
 #catbanner {
+    position: relative;
     size: auto !important;
     max-width: 60% !important;
     float: center !important;
+    display: inline;
 }
 
+.eyes {
+    position: absolute;
+    size: auto !important;
+    max-width: 58% !important;
+    float: center !important;
+    display: inline;
+    z-index: 2;
+    left: 21%;
+    top: 2%;
+
+    animation-name: lookdown;
+     animation-delay: 0s;
+     animation-duration: 6s;
+     animation-iteration-count: infinite ;
+     animation-direction: alternate;
+     animation-fill-mode: both;
+     animation-timing-function: ease-in-out;
+}
+    
+    /*webkit animation attempt with eyes*/
+    @keyframes lookdown {
+     0%   {left: ; top: 5%;}
+     5%   {left: ; top: 8%;}
+     10%  {left: 21.4%;; top:8%;}
+     15%   {left: ;  top: 8%;}
+     20%  {left: 20.6%; top:8%;}
+     25%   {left: ;  top: 8%;}
+     30%  {left: 21.4%; top:8%;}
+     35%   {left: ; top: 8%;}
+     40%   {left:21.6%; top: 8%;}
+     45% {left:21%;  top:8%;}
+     50%   {left: ; top: 5%;}
+     55%   {left: ; top: 8%;}
+     60%  {left: 21.4%;; top:8%;}
+     65%   {left: ;  top: 8%;}
+     70%  {left: 20.6%; top:8%;}
+     75%   {left: ;  top: 8%;}
+     80%  {left: 21.4%; top:8%;}
+     85%   {left: ; top: 8%;}
+     90%   {left:21.6%; top: 8%;}
+     95% {left:21%;  top:8%;}
+     100% {left:21%;  top:8%;}
+
+     
+    }
+    
+        
 #banner-title {
     margin: auto;
 }
