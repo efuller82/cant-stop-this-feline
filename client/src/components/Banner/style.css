@@ -35,33 +35,44 @@
      animation-timing-function: ease-in-out;
 }
     
-    /*webkit animation attempt with eyes*/
-    @keyframes lookdown {
-     0%   {left: ; top: 5%;}
-     5%   {left: ; top: 5%;}
-     10%  {left: 21.4%;; top:8%;}
-     15%  {left: ;  top: 8%;}
-     20%  {left: 20.6%; top:8%;}
-     25%  {left: ;  top: 8%;}
-     30%  {left: 21.4%; top:8%;}
-     35%  {left: ; top: 8%;}
-     40%  {left:21.6%; top: 8%;}
-     45%  {left:21%;  top:8%;}
-     50%  {left: ; top: 8%;}
-     55%  {left: ; top: 8%;}
-     60%  {left: 21.4%;; top:8%;}
-     65%  {left: ;  top: 8%;}
-     70%  {left: 20.6%; top:8%;}
-     75%  {left: ;  top: 8%;}
-     80%  {left: 21.4%; top:8%;}
-     85%  {left: ; top: 8%;}
-     90%  {left:21.6%; top: 8%;}
-     95%  {left:21%; top: 5%; }
-     100% {left:21%;  top:5%;}
+ @keyframes lookdown {
+     0%   {left: 21%; top: 5%;}
+     3%   {left: 21%; top: 8%;}
+     6%   {left: 21%; top:8%;}
+     9%   {left: 21%;  top: 8%;}
+     12%  {left: 21%; top:8%;}
+     15%  {left: 21%;  top: 8%;}
+     18%  {left: 21%; top:8%;}
+     21%  {left: 21%; top: 8%;}
+     24%  {left: 21%; top: 5%;}
+     27%  {left: 20.6%; top:2%;}
+     30%  {left: 21%; top: 2%;}
+     33%  {left: 21.4%; top: 5%;}
+     36%  {left: 21%; top: 8%;}
+     39%  {left: 20.6%;  top: 8%;}
+     42%  {left: 20.6%; top:8%;}
+     45%  {left: 20.6%;  top: 8%;}
+     48%  {left: 20.6%; top:8%;}
+     51%  {left: 20.6%; top: 8%;}
+     54%  {left: 21.4%; top: 8%;}
+     57%  {left: 20.6%; top:8%;}
+     60%  {left: 20.6%; top: 8%;}
+     63%  {left: 20.6%; top:8%;}
+     66%  {left: 21.4%;  top: 8%;}
+     69%  {left: 21.4%; top:8%;}
+     72%  {left: 21.4%; top: 8%;}
+     75%  {left: 21.4%; top: 8%;}
+     78%  {left: 21.4%;  top:8%;}
+     81%  {left: 21%; top: 8%;}
+     84%  {left: 21%; top: 8%;}
+     87%  {left: 21%; top:8%;}
+     90%  {left: 21%;  top: 5%;}
+     93%  {left: 21%; top:5%;}
+     96%  {left: 21%; top: 5%; }
+     100% {left: 21.4%;  top:5%;}
 
      
     }
-
 .overflow-lid {
     position: absolute !important;
     float: center !important;
