@@ -1,62 +1,57 @@
-.whole-card:hover{
-    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; /* make this whatever you want */
-    }
-
-.whole-card {
-    /* background-image: url(https://i.imgur.com/WatfHk5.png) !important; */
-    background-size: 275% !important;
-    box-shadow: 10px 10px 20px black;
-    margin-bottom: 10px !important;
+.whole-card:hover {
+  box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; /* make this whatever you want */
 }
 
+.whole-card {
+  /* background-image: url(https://i.imgur.com/WatfHk5.png) !important; */
+  background-size: 275% !important;
+  box-shadow: 10px 10px 20px black;
+  margin-bottom: 10px !important;
+}
 
 .img-container {
-    margin: 0 auto;
-    background-color: transparent;
+  margin: 0 auto;
+  background-color: transparent;
 }
 
 .whole-card {
-    height: 400px !important;
-    width: 350px !important;
-    float: left !important;    
-    margin: 20px;
-    overflow: hidden;
-
+  height: 400px !important;
+  width: 350px !important;
+  float: left !important;
+  margin: 20px;
+  overflow: hidden;
 }
 
 button.delete {
-    float: right;
-    text-align: center;
+  float: right;
+  text-align: center;
 }
 
-#leaderboard-card-title{
-    text-align: center;
-    background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
-    background:transparent !important;
-    background-size: 100% !important;
+#leaderboard-card-title {
+  text-align: center;
+  background-image: url(https://i.imgur.com/oN0mRPY.png) !important;
+  background: transparent !important;
+  background-size: 100% !important;
 }
 
 #description {
-    background:transparent;
-    background-size: 140% !important;
-    overflow-y: scroll;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    color: black;
-    /* overflow: hidden; */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* number of lines to show */
-
+  background: transparent;
+  background-size: 140% !important;
+  overflow-y: scroll;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  color: black;
+  /* overflow: hidden; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines to show */
 }
 
 #material-icons {
-    size: auto !important;
-    max-width: 100%;
+  size: auto !important;
+  max-width: 100%;
 }
-
 
 .btn-upvote {
-    background-color: #ffc0c0 !important;
+  background-color: #ffc0c0 !important;
 }
-

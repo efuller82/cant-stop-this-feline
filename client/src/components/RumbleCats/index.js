@@ -9,9 +9,13 @@ const MyRumbleCat = props => {
       <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
         {props.myCat.imgURL ? (
-            <img className="rumbleCat-pics" alt="catcat" src={props.myCat.imgURL} />
-          ) : (
-            <div></div>
+          <img
+            className="rumbleCat-pics"
+            alt="catcat"
+            src={props.myCat.imgURL}
+          />
+        ) : (
+          <div></div>
         )}
       </div>
       <p className="card-subtitle rumbleCard">{props.myCat.nickname}</p>
@@ -26,9 +30,13 @@ const ChallengerRumbleCat = props => {
       <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
         {props.challengerCat.imgURL ? (
-            <img className="rumbleCat-pics" alt="catcat" src={props.challengerCat.imgURL} />
-          ) : (
-            <div></div>
+          <img
+            className="rumbleCat-pics"
+            alt="catcat"
+            src={props.challengerCat.imgURL}
+          />
+        ) : (
+          <div></div>
         )}
       </div>
       <p className="card-subtitle rumbleCard">{props.challengerCat.nickname}</p>
@@ -43,6 +51,7 @@ class RumbleCats extends Component {
     this.state = { symbols: ["Litter-Rocks", "Paper Bag Attack", "All Claws"] };
   }
 
+  //logic that determines the winner
   andTheWinnerIs = () => {
     // console.log("this is the winner fucntion");
     // console.log(this.state);
@@ -50,7 +59,6 @@ class RumbleCats extends Component {
 
     if (myCat == challengerCat) {
       return this.setState({ winner: "Retract your claws. It's draw!" });
-
     }
     //all scenarios where myCat wins
     if (
@@ -108,7 +116,7 @@ class RumbleCats extends Component {
                 />
               </div>
 
-              <h5 className="rumbleHeaders">VS</h5>
+              <h5 className="versus">VS</h5>
 
               <h4 className="rumbleHeaders">Challenger Cat</h4>
               <div className="RumblersCard">
@@ -117,7 +125,12 @@ class RumbleCats extends Component {
                   symbol={this.state.challengerCat}
                 />
               </div>
-              <button onClick={this.startGame}>Start the Rumble!</button>
+              <button
+                className="btn btn-secondary startBtn myBtns"
+                onClick={this.startGame}
+              >
+                Start the Rumble!
+              </button>
             </Col>
           </Row>
         </Container>

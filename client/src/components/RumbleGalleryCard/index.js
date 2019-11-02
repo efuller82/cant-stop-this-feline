@@ -8,19 +8,31 @@ function RumbleGalleryCard(props) {
       <Row>
         <Col>
           <div className="card basicRumbleCard">
-            <h5 className="card-subtitle basicCard-subtitle">
-              <button
+            <button
+              onClick={() => props.handleSelection(props.id)}
+              type="button"
+              className="btn-outline-secondary myBtns"
+              id={props.id}
+            >
+              <div className="rumble-img-container img-container">
+                <img
+                  className="rumbleCat-pic"
+                  alt="catcat"
+                  src={props.imgURL}
+                />
+              </div>
+            </button>
+            <h5 className="basicCard-subtitle">
+              {/* <button
                 onClick={() => props.handleSelection(props.id)}
                 type="button"
-                className="btn-outline-primary"
+                className="btn-outline-secondary myBtns"
                 id={props.id}
               >
                 {props.nickname}
-              </button>
+              </button> */}
+              {props.nickname}
             </h5>
-            <div className="rumble-img-container">
-              <img className="rumbleCat-pic" alt="catcat" src={props.imgURL} />
-            </div>
           </div>
         </Col>
       </Row>

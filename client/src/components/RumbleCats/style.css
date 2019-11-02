@@ -1,14 +1,27 @@
+/* myCat and challengerCat rumble pic */
 .rumbleCat-pics {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 250px;
+  max-height: 250px;
   vertical-align: middle;
 }
 .rumbleHeaders {
+  font-size: 36pt;
+  font-weight: 100;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+  margin-top: 2%;
+}
+.versus {
   font-size: 18pt;
+  padding: 2%;
+  margin: 2%;
   font-weight: bold;
   text-align: center;
+  font-family: "Indie Flower", cursive;
+  color: rgb(49, 49, 49);
 }
-
 .rumbleCard {
   margin: auto;
   padding: 0.5rem;
@@ -47,20 +60,19 @@
   text-align: center;
 }
 .welcomeMsg {
-  margin: auto;
+  margin: 3%;
+  border-radius: 10%;
   text-align: center;
   font-family: "Indie Flower", cursive;
-  font-size: 36pt;
+  font-size: 28pt;
   font-weight: bold;
-  color: white;
-  padding-top: 50px;
-  padding-left: 0px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  color: rgb(49, 49, 49);
+  padding: 1.2%;
   width: 100%;
   height: 100%;
   justify-content: space-around;
   align-content: flex-start;
+  background-color: rgba(194, 105, 4, 0.781);
 }
 .gameMsg {
   margin: auto;
@@ -82,5 +94,10 @@
   color: red;
   font-size: 24pt;
   align-content: center;
-  margin-top: 4%;
+  margin: 2%;
+}
+
+.startBtn {
+  margin-top: 5%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
