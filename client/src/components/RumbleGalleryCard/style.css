@@ -1,9 +1,7 @@
-
 .rumbleCat-pic {
   max-width: 100px;
   max-height: 100px;
 }
-
 
 .rumble-img-container {
   margin: auto;
@@ -31,7 +29,7 @@
   padding: 0.5rem;
   position: relative;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+  text-align: center;
 }
 
 .card > .img-container {

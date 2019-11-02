@@ -1,38 +1,39 @@
 #containter {
-    background-color: black;
+  background-color: black;
 }
 .left-nav {
-    /* background-color: #5b4342; */
-    background-color: #000000;
-    padding: 0px !important;
-    border: 1px solid #ffc0c0;
+  /* background-color: #5b4342; */
+  background-color: #000000;
+  padding: 0px !important;
+  border: 1px solid #ffc0c0;
 }
 
 .content {
-    padding: 0 !important;
-    margin: 0 0 !important;
-    background-color: #5b4342;
-    border: 1px solid #ffc0c0;
+  padding: 0 !important;
+  margin: 0 0 !important;
+  background-color: #5b4342;
+  border: 1px solid #ffc0c0;
 }
 
 .left-nav-and-content {
-    padding-left: 0 !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 #leaderboard {
-    font-family: 'Modak', cursive;
+  font-family: "Modak", cursive;
+  text-align: center;
 }
 
 #searchHead {
-    font-family: 'Modak', cursive;
+  font-family: "Modak", cursive;
 }
 .jumbotron {
 }
-.font1{
-    font-family: 'Modak', cursive;
+.font1 {
+  font-family: "Modak", cursive;
 }
 
 .card-title {
-    font-family: 'Modak', cursive;
+  font-family: "Modak", cursive;
 }
