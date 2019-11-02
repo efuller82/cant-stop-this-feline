@@ -32,11 +32,11 @@ class Rumble extends Component {
   };
 
   handleSelection = id => {
-    console.log(this.state.cats);
-    console.log(id);
+    // console.log(this.state.cats);
+    // console.log(id);
     const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
 
-    console.log(selectedCat);
+    // console.log(selectedCat);
 
     this.setState({
       myCat: selectedCat
@@ -46,14 +46,11 @@ class Rumble extends Component {
     const challengerCat = this.state.cats[
       Math.floor(Math.random() * this.state.cats.length)
     ];
-    console.log(challengerCat);
+    // console.log(challengerCat);
     this.setState({ challengerCat: challengerCat });
   };
 
-  // Use MAP to traverse the “cats” array, check if the cat id matches selectedCat id.
-  // If it does not match, add to new array called “challengers”.
-  // Randomly Pick from “challengers” array using math.random.
-  // Display challengerCat in Box B.
+  // Add logic to compare challengerCat and selectedCat, if they are === then choose another challengerCat
 
   render() {
     return (
