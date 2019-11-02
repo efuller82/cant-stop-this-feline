@@ -5,7 +5,6 @@ import { Container, Row, Col } from "react-grid-system";
 import SideNav from "../components/SideNav";
 import API from "../utils/API";
 import "./stylePages.css";
-import firebase from "firebase";
 
 //! The next line is for dummy data only
 //import dummyCats from '../dummyCats.json';
@@ -18,24 +17,14 @@ import firebase from "firebase";
 // TODO add logic to prevent multiple clicks from one user
 
 // TODO add logic so that you can only delete your own cat(s)
-var name = "hi";
 
 class Home extends Component {
   state = {
-    cats: [],
-    isSignedIn: false,
-    user: "",
-    display: "none"
+    cats: []
   };
 
   componentDidMount() {
     this.loadCats();
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn: !!user });
-      if (this.state.isSignedIn) {
-        this.setState({ display: "" });
-      }
-    });
   }
 
   loadCats = () => {
@@ -59,7 +48,7 @@ class Home extends Component {
       .catch(err => console.log(err));
   };
 
-  render() { 
+  render() {
     return (
       <Container>
         <Banner />
@@ -80,7 +69,6 @@ class Home extends Component {
                 description={dummyCat.description}
                 votes={this.votes}
                 upvotes={dummyCat.upvotes}
-                id={this.state.display}
               />
             ))}
           </Col>
