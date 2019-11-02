@@ -6,7 +6,7 @@ const MyRumbleCat = props => {
   console.log(props);
   return (
     <div className="basicRumbleCard">
-      <p className="card-subtitle rumbleCard">{props.myCat.nickname}</p>
+      <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
         {props.myCat.imgURL ? (
             <img className="rumbleCat-pics" alt="catcat" src={props.myCat.imgURL} />
@@ -14,6 +14,7 @@ const MyRumbleCat = props => {
             <div></div>
         )}
       </div>
+      <p className="card-subtitle rumbleCard">{props.myCat.nickname}</p>
     </div>
   );
 };
@@ -22,7 +23,7 @@ const ChallengerRumbleCat = props => {
   console.log(props);
   return (
     <div className="basicRumbleCard">
-      <p className="card-subtitle rumbleCard">{props.challengerCat.nickname}</p>
+      <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
         {props.challengerCat.imgURL ? (
             <img className="rumbleCat-pics" alt="catcat" src={props.challengerCat.imgURL} />
@@ -30,6 +31,7 @@ const ChallengerRumbleCat = props => {
             <div></div>
         )}
       </div>
+      <p className="card-subtitle rumbleCard">{props.challengerCat.nickname}</p>
     </div>
   );
 };
@@ -38,23 +40,25 @@ class RumbleCats extends Component {
   //rock-paper-scissor symbols
   constructor(props) {
     super(props);
-    this.state = { symbols: ["Rock", "Paper Bag Attack", "All Claws"] };
+    this.state = { symbols: ["Litter-Rocks", "Paper Bag Attack", "All Claws"] };
   }
 
   andTheWinnerIs = () => {
-    console.log("this is the winner fucntion");
-    console.log(this.state);
+    // console.log("this is the winner fucntion");
+    // console.log(this.state);
     const { myCat, challengerCat } = this.state;
-    if (myCat === challengerCat) {
-      return this.setState({ winner: "Retract your claws it's draw!" });
+
+    if (myCat == challengerCat) {
+      return this.setState({ winner: "Retract your claws. It's draw!" });
+
     }
     //all scenarios where myCat wins
     if (
       (myCat === "Rock" && challengerCat === "All Claws") ||
-      (myCat === "Paper Bag Attack" && challengerCat === "Rock") ||
+      (myCat === "Paper Bag Attack" && challengerCat === "Litter-Rocks") ||
       (myCat === "All Claws" && challengerCat === "Paper Bag Attack")
     ) {
-      return this.setState({ winner: "You are the cat's meow!" });
+      return this.setState({ winner: "You are the cat's meow! You win!" });
     }
     //if myCat doesn't win, then the Challenger cat wins.
     else {
@@ -70,13 +74,12 @@ class RumbleCats extends Component {
     this.setState(
       {
         myCat: this.state.symbols[Math.floor(Math.random() * 3)],
-        challengerCat: this.state.symbols[Math.floor(Math.random() * 3)],
-        winner: ""
+        challengerCat: this.state.symbols[Math.floor(Math.random() * 3)]
       },
       this.andTheWinnerIs
     );
-    console.log("this is right after random symbol assigned to each cat");
-    console.log(this.state);
+    // console.log("this is right after random symbol assigned to each cat");
+    // console.log(this.state);
     // this.setState({ winner: this.andTheWinnerIs() });
   };
 
@@ -88,9 +91,17 @@ class RumbleCats extends Component {
       <Fragment>
         <Container>
           <Row>
-            <Col>
+            <Col className="myCenteredCol">
+              {this.state.winner ? (
+                <div>
+                  <div className="gameMsg">{this.state.winner}</div>
+                </div>
+              ) : (
+                ""
+              )}
+
               <h4 className="rumbleHeaders">My Cat</h4>
-              <div className="basicRumbleCard">
+              <div className="RumblersCard">
                 <MyRumbleCat
                   symbol={this.state.myCat}
                   myCat={this.props.myCat}
@@ -100,11 +111,12 @@ class RumbleCats extends Component {
               <h5 className="rumbleHeaders">VS</h5>
 
               <h4 className="rumbleHeaders">Challenger Cat</h4>
-              <ChallengerRumbleCat
-                challengerCat={this.props.challengerCat}
-                symbol={this.state.challengerCat}
-              />
-              <div>{this.state.winner}</div>
+              <div className="RumblersCard">
+                <ChallengerRumbleCat
+                  challengerCat={this.props.challengerCat}
+                  symbol={this.state.challengerCat}
+                />
+              </div>
               <button onClick={this.startGame}>Start the Rumble!</button>
             </Col>
           </Row>

@@ -61,9 +61,36 @@ class Rumble extends Component {
             <Col sm={3}>
               <SideNav />
             </Col>
-            <Col sm={9}></Col>
+            <Col sm={9}>
+              <Row>
+                <div className="welcomeMsg">
+                  First, pick your rumble cat, then Start the Rumble!
+                </div>
+
+                <Col sm={4}>
+                  <Wrapper>
+                    <div className="rumbleSubtitle">Pick Your Rumbler</div>
+                    {this.state.cats.map(dummyCat => (
+                      <RumbleGalleryCard
+                        key={dummyCat.id}
+                        id={dummyCat._id}
+                        nickname={dummyCat.nickname}
+                        imgURL={dummyCat.imgURL}
+                        handleSelection={this.handleSelection}
+                      />
+                    ))}
+                  </Wrapper>
+                </Col>
+                <Col sm={8}>
+                  <RumbleCats
+                    myCat={this.state.myCat}
+                    challengerCat={this.state.challengerCat}
+                  />
+                </Col>
+              </Row>
+            </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col sm={3}>
               <Wrapper>
                 <div className="rumbleSubtitle">Pick Your Rumbler</div>
@@ -84,7 +111,7 @@ class Rumble extends Component {
                 challengerCat={this.state.challengerCat}
               />
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </Fragment>
     );

@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-.basicRumbleCard {
+.RumblersCard {
   background: #fff;
   border-radius: 2px;
   height: auto;
@@ -44,5 +44,43 @@
   padding: 0.5rem;
   position: relative;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+  text-align: center;
+}
+.welcomeMsg {
+  margin: auto;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 36pt;
+  font-weight: bold;
+  color: white;
+  padding-top: 50px;
+  padding-left: 0px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.gameMsg {
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-style: oblique;
+  font-size: 28pt;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  color: rgba(255, 238, 0, 0.952);
+}
+
+.myCenteredCol {
+  text-align: center;
+}
+
+.symbols {
+  font-family: "Barriecito", cursive;
+  color: red;
+  font-size: 24pt;
+  align-content: center;
+  margin-top: 4%;
 }
