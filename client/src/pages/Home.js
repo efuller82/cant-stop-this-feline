@@ -60,7 +60,7 @@ class Home extends Component {
             <h1 id="leaderboard">Cat Leaderboard</h1>
             {this.state.cats.map(dummyCat => (
               <CatGalleryCard
-                key={dummyCat.id}
+                key={dummyCat._id}
                 id={dummyCat._id}
                 deleteCat={this.deleteCat}
                 catName={dummyCat.catName}

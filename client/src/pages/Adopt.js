@@ -84,11 +84,11 @@ class Adopt extends Component {
               }}
               className="jumbotron"
             >
-              <h1><span class="font1">Get your own furry ball of fun!</span></h1>
-              <h2><span class="font2">Find adoption organizations near you.</span></h2>
+              <h1><span className="font1">Get your own furry ball of fun!</span></h1>
+              <h2><span className="font2">Find adoption organizations near you.</span></h2>
             </div>
 
-            <form className="form-inline" role="form">
+            <form className="form-inline">
               <div className="form-group">
                 <label htmlFor="Title" className="sr-only">
                   Search Adoption Organizations

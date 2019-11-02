@@ -8,7 +8,11 @@ const MyRumbleCat = props => {
     <div className="basicRumbleCard">
       <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
-        <img className="rumbleCat-pics" src={props.myCat.imgURL} />
+        {props.myCat.imgURL ? (
+            <img className="rumbleCat-pics" alt="catcat" src={props.myCat.imgURL} />
+          ) : (
+            <div></div>
+        )}
       </div>
       <p className="card-subtitle rumbleCard">{props.myCat.nickname}</p>
     </div>
@@ -21,7 +25,11 @@ const ChallengerRumbleCat = props => {
     <div className="basicRumbleCard">
       <div className="symbols">{props.symbol}</div>
       <div className="rumble-img-container">
-        <img className="rumbleCat-pics" src={props.challengerCat.imgURL} />
+        {props.challengerCat.imgURL ? (
+            <img className="rumbleCat-pics" alt="catcat" src={props.challengerCat.imgURL} />
+          ) : (
+            <div></div>
+        )}
       </div>
       <p className="card-subtitle rumbleCard">{props.challengerCat.nickname}</p>
     </div>
@@ -39,8 +47,10 @@ class RumbleCats extends Component {
     // console.log("this is the winner fucntion");
     // console.log(this.state);
     const { myCat, challengerCat } = this.state;
+
     if (myCat == challengerCat) {
       return this.setState({ winner: "Retract your claws. It's draw!" });
+
     }
     //all scenarios where myCat wins
     if (
