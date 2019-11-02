@@ -23,11 +23,19 @@ class RumbleCats extends Component {
                 <img className="rumbleCat-pics" src={this.props.myCat.imgURL} />
               </div>
             </div>
+
             <h5 className="rumbleHeaders">VS</h5>
+
             <h4 className="rumbleHeaders">Challenger Cat</h4>
             <div className="basicRumbleCard">
-              <div className="img-container">
-                <img className="rumbleCat-pics" src={this.props.imgURL} />
+              <p className="card-subtitle rumbleCard">
+                {this.props.challengerCat.nickname}
+              </p>
+              <div className="rumble-img-container">
+                <img
+                  className="rumbleCat-pics"
+                  src={this.props.challengerCat.imgURL}
+                />
               </div>
             </div>
           </Col>
