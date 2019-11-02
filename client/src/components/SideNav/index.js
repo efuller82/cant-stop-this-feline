@@ -1,19 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './style.css';
+import firebase from "firebase";
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
-function SideNav() {
-    return (
-        <div>
-            <ul className='side-list' id='side-nav'>
-                <li><a href='/' className='list-item side-nav-item'>Home</a></li>
-                <li><a href='/addcat' className='list-item side-nav-item'>Add a Cat</a></li>
-                <li><a href='/rumble' className='list-item side-nav-item'>Rumble</a></li>
-                <li><a href='/adopt' className='list-item side-nav-item'>Adopt</a></li>
-                {/* Placeholder button in case google auth is in place of this */}
-                <button type='button' className='btn btn-primary btn-side-nav' id='sign-in'>Sign-In</button>
-            </ul>
-        </div>
-    );
+firebase.initializeApp({
+    apiKey: "AIzaSyA8QE7M8tA36tnEec__cfTbBPR5rcStKJk",
+    authDomain: "cant-stop-this-feline.firebaseapp.com"
+});
+
+class SideNav extends Component {
+    state = { isSignedIn: false };
+
+    uiConfig = {
+        signInFlow: "popup",
+        signInOptions: [
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID
+        ],
+        callbacks: {
+            signInSuccess: () => false
+        }
+    }
+
+    componentDidMount = () => {
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({ isSignedIn: !!user });
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <ul className='side-list' id='side-nav'>
+                    <li><a href='/' className='list-item side-nav-item'>Home</a></li>
+                    <li><a href='/addcat' className='list-item side-nav-item'>Add a Cat</a></li>
+                    <li><a href='/rumble' className='list-item side-nav-item'>Rumble</a></li>
+                    <li><a href='/adopt' className='list-item side-nav-item'>Adopt</a></li>
+                    {this.state.isSignedIn ? (
+                        <div>
+                            <p>Welcome {firebase.auth().currentUser.displayName}</p>
+                            <button onClick={() => firebase.auth().signOut()}type='button' className="btn btn-primary">Sign Out</button>
+                        </div>
+                    ) : (
+                        <StyledFirebaseAuth
+                            uiConfig={this.uiConfig}
+                            firebaseAuth={firebase.auth()}
+                        />
+                    )}
+                </ul>
+            </div>
+        );
+    }
 }
 
 export default SideNav;

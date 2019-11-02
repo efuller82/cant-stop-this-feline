@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './style.css';
-
+import firebase from "firebase";
 import API from "../../utils/API";
+
 
 class CatForm extends Component {
 
@@ -9,11 +10,14 @@ state = {
     catName: "",
     nickname: "",
     description: "",
-    imgURL: ""
+    imgURL: "",
+    isSignedIn: false
 };
 
 componentDidMount() {
-    console.log("It's mounted");
+    firebase.auth().onAuthStateChanged(user => {
+        this.setState({ isSignedIn: !!user });
+    });
 }
 
 handleInputChange = event => {
@@ -57,38 +61,42 @@ clearForm = () => {
 render() {
     return (
         <div className='card'id="add-cat-card">
-            <div className='card-body' id="add-cat-body">
-                <h3 className='card-title'>Add a Cat</h3>
-                <form>
-                    <label htmlFor='cat-name'>Cat Name: </label>
-                    <input type='text' id='cat-name' className='form-control' 
-                        value={this.state.catName}
-                        onChange={this.handleInputChange}
-                        name="catName"
-                    />
-                    <label htmlFor='nick-name'>Nickname/Alias: </label>
-                    <input type='text' id='nick-name' className='form-control' 
-                        value={this.state.nickname}
-                        onChange={this.handleInputChange}
-                        name="nickname"
-                    />
-                    <label htmlFor='bio'>What's not to love?</label>
-                    <textarea className='form-control' id='bio' rows='3' 
-                        value={this.state.description}
-                        onChange={this.handleInputChange}
-                        name="description"
-                    />
-                    <label htmlFor='add-photo'>Add Photo URL:</label>
-                    <input type='text' className='form-control' id='add-photo' 
-                        value={this.state.imgURL}
-                        onChange={this.handleInputChange}
-                        name="imgURL"
-                    />
-                    <button type="submit" className="btn btn-primary"
-                        onClick={this.handleFormSubmit}
-                    >Submit</button>
-                </form>
-            </div>
+            {this.state.isSignedIn ? (
+                <div className='card-body' id="add-cat-body">
+                    <h3 className='card-title'>Add a Cat</h3>
+                    <form>
+                        <label htmlFor='cat-name'>Cat Name: </label>
+                        <input type='text' id='cat-name' className='form-control' 
+                            value={this.state.catName}
+                            onChange={this.handleInputChange}
+                            name="catName"
+                        />
+                        <label htmlFor='nick-name'>Nickname/Alias: </label>
+                        <input type='text' id='nick-name' className='form-control' 
+                            value={this.state.nickname}
+                            onChange={this.handleInputChange}
+                            name="nickname"
+                        />
+                        <label htmlFor='bio'>What's not to love?</label>
+                        <textarea className='form-control' id='bio' rows='3' 
+                            value={this.state.description}
+                            onChange={this.handleInputChange}
+                            name="description"
+                        />
+                        <label htmlFor='add-photo'>Add Photo URL:</label>
+                        <input type='text' className='form-control' id='add-photo' 
+                            value={this.state.imgURL}
+                            onChange={this.handleInputChange}
+                            name="imgURL"
+                        />
+                        <button type="submit" className="btn btn-primary"
+                            onClick={this.handleFormSubmit}
+                        >Submit</button>
+                    </form>
+                </div>
+            ) : (
+                <div>Please sign in to view this page.</div>
+            )}
         </div>
     )
 }
