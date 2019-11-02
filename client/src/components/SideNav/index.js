@@ -38,10 +38,7 @@ class SideNav extends Component {
                     {this.state.isSignedIn ? (
                         <div>
                             <p>Welcome {firebase.auth().currentUser.displayName}</p>
-                            <button onClick={() => {
-                                firebase.auth().signOut();
-                                window.location.reload(false);
-                            }}type='button' className="btn btn-primary">Sign Out</button>
+                            <button onClick={() => firebase.auth().signOut()}type='button' className="btn btn-primary">Sign Out</button>
                         </div>
                     ) : (
                         <StyledFirebaseAuth

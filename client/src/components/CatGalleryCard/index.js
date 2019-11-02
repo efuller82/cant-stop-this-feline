@@ -5,10 +5,14 @@ function CatGalleryCard(props) {
     return (
         <div className='card whole-card'>
             <div>
+
+
                 <h5 className='card-title' id="leaderboard-card-title">
+
                     {props.catName}
-                    <button id={props.display} onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-danger delete" id={props.id}><i className="material-icons">delete_forever</i></button>
+                    <button onClick={() => props.deleteCat(props.id)} type="button" className="btn btn-danger delete" id={props.id}><i className="material-icons">delete_forever</i></button>
                 </h5>
+
             </div>
             <h6 className='card-subtitle'>
                 "{props.nickname}"
