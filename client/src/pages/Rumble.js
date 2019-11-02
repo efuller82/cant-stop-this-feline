@@ -41,13 +41,19 @@ class Rumble extends Component {
     this.setState({
       myCat: selectedCat
     });
-    //   if (selectedCat.clicked === false) {
-    //     API.selectCat({
-    //       alias: dummyCat.alias,
-    //       image: dummyCat.image
-    //     }).then(() => this.setState({ clicked: true }));
-    //   }
+
+    //this is a temporary solution -- it doesn't check to see if random cat might be the same as selected cat.
+    const challengerCat = this.state.cats[
+      Math.floor(Math.random() * this.state.cats.length)
+    ];
+    console.log(challengerCat);
+    this.setState({ challengerCat: challengerCat });
   };
+
+  // Use MAP to traverse the “cats” array, check if the cat id matches selectedCat id.
+  // If it does not match, add to new array called “challengers”.
+  // Randomly Pick from “challengers” array using math.random.
+  // Display challengerCat in Box B.
 
   render() {
     return (
