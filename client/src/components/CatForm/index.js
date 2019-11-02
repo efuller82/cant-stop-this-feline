@@ -34,14 +34,16 @@ handleFormSubmit = event => {
             catName: this.state.catName,
             nickname: this.state.nickname,
             description: this.state.description,
-            imgURL: this.state.imgURL
+            imgURL: this.state.imgURL,
+            user: firebase.auth().currentUser.displayName
         };
         console.log(catData);
         API.saveCat({ 
             catName: this.state.catName,
             nickname: this.state.nickname,
             description: this.state.description,
-            imgURL: this.state.imgURL
+            imgURL: this.state.imgURL,
+            user: firebase.auth().currentUser.displayName
          })
             .then(res => alert(res.data.catName + " has been added!"))
             .catch(err => console.log(err));
