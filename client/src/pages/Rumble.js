@@ -13,8 +13,7 @@ import API from "../utils/API";
 class Rumble extends Component {
   state = {
     cats: [],
-    // userMsg: "Choose your cat.",
-    // clicked: false,
+    clicked: false,
     myCat: {},
     challengerCat: {}
   };
@@ -23,6 +22,7 @@ class Rumble extends Component {
     this.loadCats();
   }
 
+  //loads cats into the Rumble Gallery
   loadCats = () => {
     API.getCats()
       .then(res => {
@@ -31,22 +31,40 @@ class Rumble extends Component {
       .catch(err => console.log(err));
   };
 
+  //Reset game when user clicks reset button
+  resetGame = () => {
+    console.log("Clicked Reset Button");
+    this.setState({
+      myCat: {},
+      challengerCat: {},
+      clicked: false
+    });
+  };
+
+  //The winner gets a point/upvote
+  votes = cat => {
+    var objectU = { upvotes: cat.upvotes + 1 };
+    API.updateCat(cat._id, objectU)
+      .then(res => this.loadCats())
+      .catch(err => console.log(err));
+  };
+
+  //This handles the cat the user selects to rumble.
+  //Add selected cat as My Cat.
+  //Setting Clicked to True will enable the Start button
+  //Computer randomly picks the Challenger Cat.
   handleSelection = id => {
-    // console.log(this.state.cats);
-    // console.log(id);
     const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
 
-    // console.log(selectedCat);
-
     this.setState({
-      myCat: selectedCat
+      myCat: selectedCat,
+      clicked: true
     });
 
-    //this is a temporary solution -- it doesn't check to see if random cat might be the same as selected cat.
+    //To Do next sprint -- add a check to see if random cat might be the same as selected cat.
     const challengerCat = this.state.cats[
       Math.floor(Math.random() * this.state.cats.length)
     ];
-    // console.log(challengerCat);
     this.setState({ challengerCat: challengerCat });
   };
 
@@ -63,9 +81,23 @@ class Rumble extends Component {
             </Col>
             <Col sm={9}>
               <Row>
-                <div className="welcomeMsg">
-                  First, pick your rumble cat, then Start the Rumble!
+                <div>
+                  <p className="welcomeMsg">
+                    First, pick your rumble cat. The the computer will pick your
+                    challenger. Then click Start the Rumble!
+                  </p>
                 </div>
+                <ul className="rules">
+                  <li>
+                    <em>Litter-Rocks</em> beats <em>All Claws</em>
+                  </li>
+                  <li>
+                    <em>All Claws beats</em> <em>Paper Bag Attack</em>
+                  </li>
+                  <li>
+                    <em>Paper Bag Attack</em> beats <em>Litter-Rocks</em>
+                  </li>
+                </ul>
 
                 <Col sm={4}>
                   <Wrapper>
@@ -77,6 +109,9 @@ class Rumble extends Component {
                         nickname={dummyCat.nickname}
                         imgURL={dummyCat.imgURL}
                         handleSelection={this.handleSelection}
+                        // upvotes={dummyCat.upvotes}
+                        // votes={this.votes}
+                        // clicked={this.clicked}
                       />
                     ))}
                   </Wrapper>
@@ -85,6 +120,10 @@ class Rumble extends Component {
                   <RumbleCats
                     myCat={this.state.myCat}
                     challengerCat={this.state.challengerCat}
+                    resetGame={this.resetGame}
+                    clicked={this.state.clicked}
+                    // upvotes={dummyCat.upvotes}
+                    votes={this.votes}
                   />
                 </Col>
               </Row>

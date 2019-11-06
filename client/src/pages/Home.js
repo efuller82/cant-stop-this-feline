@@ -14,9 +14,9 @@ import "./stylePages.css";
 
 // function that allows user to click on a cat and give it a point (upvote)
 // user will need to be signed in to access this feature
-// TODO add logic to prevent multiple clicks from one user
+// Sprint 2 add logic to prevent multiple clicks from one user
 
-// TODO add logic so that you can only delete your own cat(s)
+// Sprint 2 add logic so that you can only delete your own cat(s)
 
 class Home extends Component {
   state = {
@@ -56,7 +56,7 @@ class Home extends Component {
           <Col sm={3}>
             <SideNav />
           </Col>
-          <Col sm={9} className='main-cat-content'>
+          <Col sm={9} className="main-cat-content">
             <h1 id="leaderboard">Cat Leaderboard</h1>
             {this.state.cats.map(dummyCat => (
               <CatGalleryCard
