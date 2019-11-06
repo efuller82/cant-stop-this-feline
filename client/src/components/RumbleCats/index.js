@@ -66,12 +66,16 @@ class RumbleCats extends Component {
       (myCat === "Paper Bag Attack" && challengerCat === "Litter-Rocks") ||
       (myCat === "All Claws" && challengerCat === "Paper Bag Attack")
     ) {
-      return this.setState({ winner: "You are the cat's meow! You win!" });
+      return this.setState({ 
+        winner: "You are the cat's meow! You win!",
+        upvotes: myCat.upvotes + 1 
+     });
     }
     //if myCat doesn't win, then the Challenger cat wins.
     else {
       this.setState({
-        winner: "You can't fight this feline anymore. The challenger wins!"
+        winner: "You can't fight this feline anymore. The challenger wins!",
+        upvotes: challengerCat.upvotes + 1 
       });
     }
   };
