@@ -31,7 +31,6 @@ class Rumble extends Component {
       .catch(err => console.log(err));
   };
 
-  //Reset game when user clicks reset button
   resetGame = () => {
     console.log("Clicked Reset Button");
     this.setState({
@@ -53,6 +52,7 @@ class Rumble extends Component {
   //Add selected cat as My Cat.
   //Setting Clicked to True will enable the Start button
   //Computer randomly picks the Challenger Cat.
+
   handleSelection = id => {
     const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
 
