@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-grid-system";
 import SideNav from "../components/SideNav";
 import API from "../utils/API";
 import "./stylePages.css";
+import firebase from "firebase";
 
 //! The next line is for dummy data only
 //import dummyCats from '../dummyCats.json';
@@ -20,11 +21,22 @@ import "./stylePages.css";
 
 class Home extends Component {
   state = {
-    cats: []
+    cats: [],
+    user: "",
+    className: "btn btn-danger delete",
+    none: "hide"
   };
 
   componentDidMount() {
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user });
+      this.saveUser(firebase.auth().currentUser.displayName);
+    });
     this.loadCats();
+  }
+
+  saveUser = (user) => {
+    this.setState({ user: user });
   }
 
   loadCats = () => {
@@ -58,11 +70,25 @@ class Home extends Component {
           </Col>
           <Col sm={9} className='main-cat-content'>
             <h1 id="leaderboard">Cat Leaderboard</h1>
-            {this.state.cats.map(dummyCat => (
+            {this.state.cats.map(dummyCat => dummyCat.user === this.state.user ? (
+              <CatGalleryCard
+              key={dummyCat._id}
+              id={dummyCat._id}
+              deleteCat={this.deleteCat}
+              className={this.state.className}
+              catName={dummyCat.catName}
+              nickname={dummyCat.nickname}
+              imgURL={dummyCat.imgURL}
+              description={dummyCat.description}
+              votes={this.votes}
+              upvotes={dummyCat.upvotes}
+              />
+            ) : (
               <CatGalleryCard
                 key={dummyCat._id}
                 id={dummyCat._id}
                 deleteCat={this.deleteCat}
+                className={this.state.none}
                 catName={dummyCat.catName}
                 nickname={dummyCat.nickname}
                 imgURL={dummyCat.imgURL}
@@ -70,7 +96,8 @@ class Home extends Component {
                 votes={this.votes}
                 upvotes={dummyCat.upvotes}
               />
-            ))}
+            )
+            )}
           </Col>
         </Row>
       </Container>
