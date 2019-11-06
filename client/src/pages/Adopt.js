@@ -82,14 +82,37 @@ class Adopt extends Component {
                 paddingTop: 120,
                 textAlign: "center"
               }}
-              className="jumbotron"
-            >
+              className="jumbotron" >
+                <div id='gifcatdiv'>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif1'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" className="catgifs" id='catgif2'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/MWSRkVoNaC30A/giphy.gif" className="catgifs" id='catgif3'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VOPK1BqsMEJRS/giphy.gif" className="catgifs" id='catgif4'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif5'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif6'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif7'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" className="catgifs" id='catgif8'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/MWSRkVoNaC30A/giphy.gif" className="catgifs" id='catgif9'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VOPK1BqsMEJRS/giphy.gif" className="catgifs" id='catgif10'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif11'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif12'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VOPK1BqsMEJRS/giphy.gif" className="catgifs" id='catgif13'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif14'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif15'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VOPK1BqsMEJRS/giphy.gif" className="catgifs" id='catgif16'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif17'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif18'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif19'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif20'alt='catgif'></img>
+                
+                
+                </div>
               <h1>
                 <span className="font1">Get your own furry ball of fun!</span>
               </h1>
               <h2>
                 <span className="font2">
-                  Find adoption organizations near you.
+                  Find adoption organizations near you!
                 </span>
               </h2>
             </div>

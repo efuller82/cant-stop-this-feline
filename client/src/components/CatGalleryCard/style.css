@@ -54,4 +54,10 @@ button.delete {
 
 .btn-upvote {
   background-color: #ffc0c0 !important;
+  border: black 2px !important;
+}
+
+
+.btn-upvote:active {
+    transform: scale(0.99) !important;
 }

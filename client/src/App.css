@@ -24,3 +24,7 @@
 body {
   background-image: url(https://i.imgur.com/WatfHk5.png) !important;
 }
+
+.btn-success:onclick {
+  border: #282c34;
+}
