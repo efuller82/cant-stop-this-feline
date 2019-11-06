@@ -2,13 +2,13 @@ https://cant-stop-this-feline.herokuapp.com/
 
 # Can't Stop this Feline
 
-This application is like a social media site for cats, a place to play games with your cats and others' cats, and a place to find pet adoption centers in your area.
+This application acts as a social media site for cats, a place to play games with your cats and others' cats, and a place to find pet adoption centers in your area.
 
 ## Motivation
 
 Animal shelters are overrun with abandoned and lost friends in need of a home.  There is no shortage of websites on the web to find these centers, but we felt they weren't getting enough traffic.
 
-## App is made of of four pages
+## App is made up of four pages
 
 ### Home 
 
@@ -31,7 +31,7 @@ The winner gets a point added to their upvotes!
 
 ![Add a cat](./readme-imgs/Add-a-cat.PNG)
 
-When signed in, you can add your own cat.  You can link your cat here with a URL from imgur.com.
+When signed in, the user can add your own cat.  The user can link your cat here with a URL from imgur.com.
 
 ### Adopt
 
