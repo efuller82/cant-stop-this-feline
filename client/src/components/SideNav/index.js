@@ -5,7 +5,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
 firebase.initializeApp({
     apiKey: "AIzaSyA8QE7M8tA36tnEec__cfTbBPR5rcStKJk",
-    authDomain: "https://cant-stop-this-feline.herokuapp.com/"
+    authDomain: "cant-stop-this-feline.firebaseapp.com"
 });
 
 class SideNav extends Component {
