@@ -11,12 +11,14 @@ state = {
     nickname: "",
     description: "",
     imgURL: "",
-    isSignedIn: false
+    isSignedIn: false,
+    user: ""
 };
 
 componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: !!user });
+        this.saveUser(firebase.auth().currentUser.displayName);
     });
 }
 
@@ -34,14 +36,16 @@ handleFormSubmit = event => {
             catName: this.state.catName,
             nickname: this.state.nickname,
             description: this.state.description,
-            imgURL: this.state.imgURL
+            imgURL: this.state.imgURL,
+            user: this.state.user
         };
-        console.log(catData);
+        //console.log(catData);
         API.saveCat({ 
             catName: this.state.catName,
             nickname: this.state.nickname,
             description: this.state.description,
-            imgURL: this.state.imgURL
+            imgURL: this.state.imgURL,
+            user: this.state.user
          })
             .then(res => alert(res.data.catName + " has been added!"))
             .catch(err => console.log(err));
@@ -56,6 +60,10 @@ clearForm = () => {
         description: "",
         imgURL: ""
     });
+}
+
+saveUser = (user) => {
+    this.setState({ user: user});
 }
 
 render() {
