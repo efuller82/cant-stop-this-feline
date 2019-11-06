@@ -68,7 +68,7 @@ class Home extends Component {
           <Col sm={3}>
             <SideNav />
           </Col>
-          <Col sm={9} className='main-cat-content'>
+          <Col sm={9} className="main-cat-content">
             <h1 id="leaderboard">Cat Leaderboard</h1>
             {this.state.cats.map(dummyCat => dummyCat.user === this.state.user ? (
               <CatGalleryCard
