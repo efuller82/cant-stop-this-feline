@@ -1,12 +1,18 @@
 .whole-card:hover {
+  box-shadow: 10px 10px 20px black;
   box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; /* make this whatever you want */
 }
 
 .whole-card {
   /* background-image: url(https://i.imgur.com/WatfHk5.png) !important; */
-  background-size: 275% !important;
   box-shadow: 10px 10px 20px black;
   margin-bottom: 10px !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-size: 10% !important;;
+  background-color: transparent;
+  color:black;
+  
 }
 
 .img-container {
@@ -20,6 +26,8 @@
   float: left !important;
   margin: 20px;
   overflow: hidden;
+  
+  
 }
 
 button.delete {
@@ -53,10 +61,18 @@ button.delete {
 }
 
 .btn-upvote {
-  background-color: #ffc0c0 !important;
-  border: black 2px !important;
+  margin-top: 2%;
+  border: #f0a8cc !important;
+  background-image: url(https://i.imgur.com/qgy5MCX.png) !important;
+  background-repeat: repeat !important;
+  background-size: 10% !important;
+  color: black !important;
 }
 
 .hide {
   display: none;
+}
+
+.card-subtitle {
+  text-align: center;
 }
