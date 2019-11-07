@@ -22,17 +22,7 @@ function RumbleGalleryCard(props) {
                 />
               </div>
             </button>
-            <h5 className="basicCard-subtitle">
-              {/* <button
-                onClick={() => props.handleSelection(props.id)}
-                type="button"
-                className="btn-outline-secondary myBtns"
-                id={props.id}
-              >
-                {props.nickname}
-              </button> */}
-              {props.nickname}
-            </h5>
+            <h5 className="basicCard-subtitle">{props.nickname}</h5>
           </div>
         </Col>
       </Row>
