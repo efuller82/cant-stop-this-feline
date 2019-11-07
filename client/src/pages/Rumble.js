@@ -22,6 +22,7 @@ class Rumble extends Component {
     this.loadCats();
   }
 
+  //loads cats into the Rumble Gallery
   loadCats = () => {
     API.getCats()
       .then(res => {
@@ -37,7 +38,6 @@ class Rumble extends Component {
       challengerCat: {},
       clicked: false
     });
-    // this.props.loadCats();
   };
 
   //The winner gets a point/upvote
@@ -46,28 +46,25 @@ class Rumble extends Component {
     API.updateCat(cat._id, objectU)
       .then(res => this.loadCats())
       .catch(err => console.log(err));
-
-    console.log("My cat should get plus 1");
-    console.log(cat._id);
   };
 
-  handleSelection = id => {
-    // console.log(this.state.cats);
-    // console.log(id);
-    const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
+  //This handles the cat the user selects to rumble.
+  //Add selected cat as My Cat.
+  //Setting Clicked to True will enable the Start button
+  //Computer randomly picks the Challenger Cat.
 
-    // console.log(selectedCat);
+  handleSelection = id => {
+    const selectedCat = this.state.cats.find(dummyCat => dummyCat._id === id);
 
     this.setState({
       myCat: selectedCat,
       clicked: true
     });
 
-    //this is a temporary solution -- it doesn't check to see if random cat might be the same as selected cat.
+    //To Do next sprint -- add a check to see if random cat might be the same as selected cat.
     const challengerCat = this.state.cats[
       Math.floor(Math.random() * this.state.cats.length)
     ];
-    // console.log(challengerCat);
     this.setState({ challengerCat: challengerCat });
   };
 
@@ -84,9 +81,23 @@ class Rumble extends Component {
             </Col>
             <Col sm={9}>
               <Row>
-                <div className="welcomeMsg">
-                  First, pick your rumble cat, then Start the Rumble!
+                <div>
+                  <p className="welcomeMsg">
+                    First, pick your rumble cat. The the computer will pick your
+                    challenger. Then click Start the Rumble!
+                  </p>
                 </div>
+                <ul className="rules">
+                  <li>
+                    <em>Litter-Rocks</em> beats <em>All Claws</em>
+                  </li>
+                  <li>
+                    <em>All Claws beats</em> <em>Paper Bag Attack</em>
+                  </li>
+                  <li>
+                    <em>Paper Bag Attack</em> beats <em>Litter-Rocks</em>
+                  </li>
+                </ul>
 
                 <Col sm={4}>
                   <Wrapper>

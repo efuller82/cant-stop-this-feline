@@ -59,21 +59,26 @@
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: center;
 }
+
 .welcomeMsg {
-  margin: 3%;
-  border-radius: 10%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
   text-align: center;
-  font-family: "Indie Flower", cursive;
-  font-size: 28pt;
+  font-family: "Lakki+Reddy", cursive;
+  font-size: 26pt;
   font-weight: bold;
   color: rgb(49, 49, 49);
-  padding: 1.2%;
+  padding-top: 1.2%;
+  padding-left: 1.2%;
+  padding-right: 1.2%;
   width: 100%;
   height: 100%;
   justify-content: space-around;
   align-content: flex-start;
   background-color: rgba(194, 105, 4, 0.781);
+  line-height: 110%;
 }
+
 .gameMsg {
   margin: auto;
   padding: 0.5rem;
