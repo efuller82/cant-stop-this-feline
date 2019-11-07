@@ -4,6 +4,16 @@
   background-repeat: no-repeat;
   background-color: transparent;
 }
+
+#add-cat-body2 {
+  background-image: url(https://i.imgur.com/OBY0RV8.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 25px;
+  font-family: "Lakki+Reddy", cursive;
+}
+
 #add-cat-card {
   background-size: 140% !important;
   background-color: transparent;
