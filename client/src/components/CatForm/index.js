@@ -116,7 +116,7 @@ class CatForm extends Component {
                 className="btn btn-primary submitBtn"
                 onClick={this.handleFormSubmit}
               >
-                Submit
+                <span id="submit text">Submit</span>
               </button>
             </form>
           </div>

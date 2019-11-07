@@ -56,3 +56,11 @@
   background-color: rgba(128, 128, 128, 0.657);
   color: white;
 }
+
+.RumblersCard {
+  border: #f0a8cc !important;
+  background-image: url(https://i.imgur.com/qgy5MCX.png) !important;
+  background-repeat: repeat !important;
+  background-size: 10% !important;
+  color: black !important;
+}

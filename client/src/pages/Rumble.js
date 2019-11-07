@@ -86,7 +86,7 @@ class Rumble extends Component {
             </Col>
             <Col sm={9}>
               <Row>
-                <div>
+                <div id="rumbleIntro">
                   <p className="welcomeMsg">
                     First, pick your rumble cat. The the computer will pick your
                     challenger. Then click Start the Rumble!

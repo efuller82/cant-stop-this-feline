@@ -37,11 +37,11 @@ class SideNav extends Component {
                     <li><a href='/adopt' className='list-item side-nav-item'>Adopt</a></li>
                     {this.state.isSignedIn ? (
                         <div>
-                            <p>Welcome {firebase.auth().currentUser.displayName}</p>
+                            <p id="user">Welcome,<br></br>{firebase.auth().currentUser.displayName}</p>
                             <button onClick={() => {
                                 firebase.auth().signOut();
                                 window.location.reload(false);
-                            }}type='button' className="btn btn-primary">Sign Out</button>
+                            }}type='button' className="btn btn-primary" id="signOut">Sign Out</button>
                         </div>
                     ) : (
                         <StyledFirebaseAuth
