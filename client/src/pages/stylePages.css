@@ -72,17 +72,30 @@
   flex-wrap: wrap;
   background:black;
   align-content: center;
+  
 }
 
 .catgifs {
 bottom: 10%;
 top:10%;
-max-height: 100%;
+max-height: 50%;
 max-width: 20%;
 z-index: 1;
 background-color: black;
 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   opacity: .35;
-
 }
+
+.startBtn {
+  margin-left: 5% !important;
+  margin-top: 0px !important;
+  float:right !important;
+  border: #f0a8cc !important;
+  background-image: url(https://i.imgur.com/qgy5MCX.png) !important;
+   background-repeat: repeat;
+   background-size: 40%;
+}
+
+
+

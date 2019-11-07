@@ -117,12 +117,13 @@ class Adopt extends Component {
               </h2>
             </div>
 
-            <form className="form-inline">
+            <form className="form-inline" id="adoptForm">
+
               <div className="form-group">
                 <label htmlFor="Title" className="sr-only">
                   Search Adoption Organizations
                 </label>
-                <input
+                <input 
                   className="form-control"
                   id="Title"
                   type="text"
@@ -137,8 +138,7 @@ class Adopt extends Component {
               <button
                 onClick={this.handleFormSubmit}
                 type="submit"
-                className="btn btn-lg search-btn startBtn"
-              >
+                className="btn btn-lg search-btn startBtn" id="adoptSearchButton">
                 Search
               </button>
             </form>
