@@ -61,7 +61,7 @@ class Rumble extends Component {
       clicked: true
     });
 
-    //To Do next sprint -- add a check to see if random cat might be the same as selected cat.
+    //Check if random cat might be the same as selected cat, if so, pick another Challenger Cat
     const challengerCat = this.state.cats[
       Math.floor(Math.random() * this.state.cats.length)
     ];
@@ -74,8 +74,6 @@ class Rumble extends Component {
       this.setState({ challengerCat: challengerCat });
     }
   };
-
-  // Add logic to compare challengerCat and selectedCat, if they are === then choose another challengerCat
 
   render() {
     return (
@@ -96,16 +94,15 @@ class Rumble extends Component {
                 </div>
                 <ul className="rules">
                   <li>
-                    <em>Litter-Rocks</em> beats <em>All Claws</em>
+                    <em>"Litter-Rocks" </em> beats <em> "All Claws"</em>
                   </li>
                   <li>
-                    <em>All Claws beats</em> <em>Paper Bag Attack</em>
+                    <em>"All Claws" </em> beats <em> "Paper Bag Attack"</em>
                   </li>
                   <li>
-                    <em>Paper Bag Attack</em> beats <em>Litter-Rocks</em>
+                    <em>"Paper Bag Attack" </em> beats <em> "Litter-Rocks"</em>
                   </li>
                 </ul>
-
                 <Col sm={4}>
                   <Wrapper>
                     <div className="rumbleSubtitle">Pick Your Rumbler</div>
@@ -116,9 +113,6 @@ class Rumble extends Component {
                         nickname={dummyCat.nickname}
                         imgURL={dummyCat.imgURL}
                         handleSelection={this.handleSelection}
-                        // upvotes={dummyCat.upvotes}
-                        // votes={this.votes}
-                        // clicked={this.clicked}
                       />
                     ))}
                   </Wrapper>
@@ -129,35 +123,12 @@ class Rumble extends Component {
                     challengerCat={this.state.challengerCat}
                     resetGame={this.resetGame}
                     clicked={this.state.clicked}
-                    // upvotes={dummyCat.upvotes}
                     votes={this.votes}
                   />
                 </Col>
               </Row>
             </Col>
           </Row>
-          {/* <Row>
-            <Col sm={3}>
-              <Wrapper>
-                <div className="rumbleSubtitle">Pick Your Rumbler</div>
-                {this.state.cats.map(dummyCat => (
-                  <RumbleGalleryCard
-                    key={dummyCat._id}
-                    id={dummyCat._id}
-                    nickname={dummyCat.nickname}
-                    imgURL={dummyCat.imgURL}
-                    handleSelection={this.handleSelection}
-                  />
-                ))}
-              </Wrapper>
-            </Col>
-            <Col sm={9}>
-              <RumbleCats
-                myCat={this.state.myCat}
-                challengerCat={this.state.challengerCat}
-              />
-            </Col>
-          </Row> */}
         </Container>
       </Fragment>
     );

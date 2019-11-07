@@ -1,11 +1,15 @@
 #add-cat-body {
-    background-image: url(https://i.imgur.com/OBY0RV8.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: transparent;
+  background-image: url(https://i.imgur.com/OBY0RV8.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 #add-cat-card {
-    background-image: url(https://i.imgur.com/WatfHk5.png);
-    background-size: 130%;
-    box-shadow: 10px 10px 20px black;
-};
+  background-image: url(https://i.imgur.com/WatfHk5.png);
+  background-size: 130%;
+  box-shadow: 10px 10px 20px black;
+}
+
+.submitBtn {
+  margin-top: 2%;
+}

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import "./style.css";
 import { Container, Row, Col } from "react-grid-system";
-import { throws } from "assert";
+// import { throws } from "assert";
 
 const MyRumbleCat = props => {
   console.log(props);
@@ -65,7 +65,7 @@ class RumbleCats extends Component {
     }
     //all scenarios where myCat wins
     if (
-      (myCat === "Rock" && challengerCat === "All Claws") ||
+      (myCat === "Litter-Rocks" && challengerCat === "All Claws") ||
       (myCat === "Paper Bag Attack" && challengerCat === "Litter-Rocks") ||
       (myCat === "All Claws" && challengerCat === "Paper Bag Attack")
     ) {
@@ -80,7 +80,6 @@ class RumbleCats extends Component {
       const addPoint = { ...this.state };
       addPoint.winner =
         "You can't fight this feline anymore. The challenger wins!";
-      // addPoint.challengerCat.upvotes = challengerCat.upvotes + 1;
 
       this.setState(addPoint, () => this.props.votes(this.props.challengerCat));
       console.log("Challenger should get plus 1 vote");
@@ -90,7 +89,6 @@ class RumbleCats extends Component {
 
   //Start game triggered on click of start button
   startGame = () => {
-    // console.log(this.state);
     this.setState(
       {
         myCat: this.state.symbols[Math.floor(Math.random() * 3)],
@@ -98,22 +96,18 @@ class RumbleCats extends Component {
       },
       this.andTheWinnerIs
     );
-    // console.log("this is right after random symbol assigned to each cat");
-    // console.log(this.state);
-    // this.setState({ winner: this.andTheWinnerIs() });
   };
 
   resetSymbols = () => {
     this.setState({
       myCat: "",
-      challengerCat: ""
+      challengerCat: "",
+      winner: ""
     });
     this.props.resetGame();
   };
 
   render() {
-    // console.log("This one is the class one.");
-    // console.log(this.props);
     const { clicked } = this.props.myCat;
     const isActive = clicked === true;
 
