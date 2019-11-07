@@ -110,3 +110,22 @@
   background-repeat: repeat;
   background-size: 40%;
 }
+
+#rumbleIntro {
+background: transparent !important;
+background-repeat: no-repeat !important;
+background-size: 200% !important;
+}
+
+.welcomeMsg {
+  background: transparent !important;
+
+}
+
+.rules {
+  background: transparent !important;
+}
+
+#rumbleGalleryCol {
+ /* background-color: #13100e !important;*/
+}

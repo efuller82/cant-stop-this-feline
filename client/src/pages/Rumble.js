@@ -88,8 +88,7 @@ class Rumble extends Component {
               <Row>
                 <div id="rumbleIntro">
                   <p className="welcomeMsg">
-                    First, pick your rumble cat. The the computer will pick your
-                    challenger. Then click Start the Rumble!
+                    Choose a Rumble Cat, then click start to Rumble!
                   </p>
                 </div>
                 <ul className="rules">
@@ -105,7 +104,7 @@ class Rumble extends Component {
                 </ul>
                 <Col sm={4}>
                   <Wrapper>
-                    <div className="rumbleSubtitle">Pick Your Rumbler</div>
+                    <div className="rumbleSubtitle">Rumblers</div>
                     {this.state.cats.map(dummyCat => (
                       <RumbleGalleryCard
                         key={dummyCat.id}

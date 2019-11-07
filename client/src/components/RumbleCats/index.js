@@ -122,6 +122,7 @@ class RumbleCats extends Component {
 
                   <button
                     className="btn btn-secondary startBtn myBtns"
+                    id="resetGame"
                     onClick={() => this.resetSymbols()}
                   >
                     Reset Game
@@ -154,6 +155,7 @@ class RumbleCats extends Component {
               <button
                 disabled={!this.props.clicked}
                 className="btn btn-secondary startBtn myBtns"
+                id="rumbleStart"
                 onClick={this.startGame}
               >
                 Start the Rumble!
