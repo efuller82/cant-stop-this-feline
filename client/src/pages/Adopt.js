@@ -82,24 +82,48 @@ class Adopt extends Component {
                 paddingTop: 120,
                 textAlign: "center"
               }}
-              className="jumbotron"
-            >
+              className="jumbotron" >
+                <div id='gifcatdiv'>
+                <img src="https://media.giphy.com/media/11c7UUfN4eoHF6/giphy.gif" className="catgifs" id='catgif1'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" className="catgifs" id='catgif2'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/MWSRkVoNaC30A/giphy.gif" className="catgifs" id='catgif3'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VOPK1BqsMEJRS/giphy.gif" className="catgifs" id='catgif4'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/WYEWpk4lRPDq0/giphy.gif" className="catgifs" id='catgif5'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/a2SR6Ag8ChUlO/giphy.gif" className="catgifs" id='catgif6'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" className="catgifs" id='catgif7'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/MCfhrrNN1goH6/giphy-downsized-large.gif" className="catgifs" id='catgif8'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/clH86Ymwn1Fa8/giphy-downsized-large.gif" className="catgifs" id='catgif9'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/H4DjXQXamtTiIuCcRU/giphy.gif" className="catgifs" id='catgif10'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/58FIX82hTHwcw/source.gif" className="catgifs" id='catgif11'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/C1m9MPACd6Nk4/source.gif" className="catgifs" id='catgif12'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/5exwXWg9u7yow/source.gif" className="catgifs" id='catgif13'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/UZz8BikCqfYzK/source.gif" className="catgifs" id='catgif14'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/40Fpxgn6Yq640/source.gif" className="catgifs" id='catgif15'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/7ygVM8vWhlkEo/source.gif" className="catgifs" id='catgif16'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/t7MWRoExDRF72/source.gif" className="catgifs" id='catgif17'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/KijmmcKP62qWs/giphy.gif" className="catgifs" id='catgif18'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/DeidU9jiZ62ys/source.gif" className="catgifs" id='catgif19'alt='catgif'></img>
+                <img src="https://media.giphy.com/media/C23cMUqoZdqMg/source.gif" className="catgifs" id='catgif20'alt='catgif'></img>
+                
+                
+                </div>
               <h1>
                 <span className="font1">Get your own furry ball of fun!</span>
               </h1>
               <h2>
                 <span className="font2">
-                  Find adoption organizations near you.
+                  Find adoption organizations near you!
                 </span>
               </h2>
             </div>
 
-            <form className="form-inline">
+            <form className="form-inline" id="adoptForm">
+
               <div className="form-group">
                 <label htmlFor="Title" className="sr-only">
                   Search Adoption Organizations
                 </label>
-                <input
+                <input 
                   className="form-control"
                   id="Title"
                   type="text"
@@ -114,8 +138,7 @@ class Adopt extends Component {
               <button
                 onClick={this.handleFormSubmit}
                 type="submit"
-                className="btn btn-lg search-btn startBtn"
-              >
+                className="btn btn-lg search-btn startBtn" id="adoptSearchButton">
                 Search
               </button>
             </form>
