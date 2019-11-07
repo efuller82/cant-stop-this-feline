@@ -121,7 +121,7 @@ class CatForm extends Component {
             </form>
           </div>
         ) : (
-          <div>Please sign in to view this page.</div>
+          <div id="add-cat-body2">Please sign in to view this page.</div>
         )}
       </div>
     );
