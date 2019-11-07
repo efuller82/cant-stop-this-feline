@@ -65,7 +65,14 @@ class Rumble extends Component {
     const challengerCat = this.state.cats[
       Math.floor(Math.random() * this.state.cats.length)
     ];
-    this.setState({ challengerCat: challengerCat });
+
+    if (challengerCat === selectedCat) {
+      const challengerCat = this.state.cats[
+        Math.floor(Math.random() * this.state.cats.length)
+      ];
+    } else {
+      this.setState({ challengerCat: challengerCat });
+    }
   };
 
   // Add logic to compare challengerCat and selectedCat, if they are === then choose another challengerCat
